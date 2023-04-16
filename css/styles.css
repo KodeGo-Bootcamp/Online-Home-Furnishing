@@ -1,9 +1,26 @@
 
 
-.navbar-brand img{
-    width: 50px;
-    height: 50px;
+body{
+    background-color: #FFE5CA;
 }
+
+header{
+    color: aqua;
+    background-position: center;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3% 7%;
+}
+
+nav ul li a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
 .btn-outline-success{
     border: none;
     background-color: white;
@@ -18,9 +35,16 @@
 
 }
 
+/* .bi-cart svg{
+    padding-left: 50%;
+}  */
 
-
-
+.col{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
 
 
 /* Media Query */
