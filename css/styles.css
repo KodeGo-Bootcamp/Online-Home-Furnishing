@@ -1,75 +1,80 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} 
-
-body{
-    background-color: #F4EEE0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
 }
 
-.header{
-    padding-left: 0px;
-    padding-right: 0px;
-    border: none;
-
+body {
+  background-color: #f4eee0;
 }
 
-.navbar-nav{
-    margin-left: 0px;
-    padding-left: 0px;
+header {
+  padding-left: 0px;
+  padding-right: 0px;
+  border: none;
 }
 
-.btn-outline-success{
-    border: none;
-    background-color: white;
-    color: black;
-
+.navbar-nav {
+  display: flex;
+  margin-left: 0px;
+  padding-left: 0px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.btn-outline-success:hover{
-    border: none;
-    background-color: #6D5D6E;
-    color: black;
-
-}
-.nav-item{
-    margin-left: 1vh;
-    color: black;
-}
-.nav-item:hover{
-    border: none;
-    background-color: #6D5D6E;
-    color: black;
+.btn-outline-success {
+  border: none;
+  background-color: white;
+  color: black;
 }
 
-
-.col{
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 150px;
+.btn-outline-success:hover {
+  border: none;
+  background-color: #6d5d6e;
+  color: black;
+}
+.nav-item {
+  margin-left: 1vh;
+  color: black;
+}
+.nav-item:hover {
+  border: none;
+  background-color: #6d5d6e;
+  color: black;
+}
+#cart-icon {
+  font-size: 1.5rem;
+  color: white;
+  padding: 8px;
 }
 
+.col {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
 
 /* Media Query */
 
-@media only screen and  (max-width: 600px){
-    .navbar-brand img{
-        
-        width: 50px;
-        height: 50px;
-
-    }
-    .btn-outline-success{
-        border: none;
-        color: black;
-        margin: 0%;
-    }
-    .btn-outline-success:hover{
-        border: none;
-        background-color: blanchedalmond;
-        color: black;
-    
-    }
+@media only screen and (max-width: 600px) {
+  .navbar-brand img {
+    width: 50px;
+    height: 50px;
+  }
+  .btn-outline-success {
+    border: none;
+    color: black;
+    margin: 0%;
+  }
+  .btn-outline-success:hover {
+    border: none;
+    background-color: blanchedalmond;
+    color: black;
+  }
 }
