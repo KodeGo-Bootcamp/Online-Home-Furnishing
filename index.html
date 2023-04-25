@@ -1,45 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Online Home Furnishing" />
+    <meta
+      name="description"
+      content="This is an Online Furniture Store made by Group 4 from WD47"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="title" content="Online Home Furnishing">
-  <meta name="description" content="This is an Online Furniture Store made by Group 4 from WD47">
+    <title>Online Home Furnishing</title>
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 
-  <title>Online Home Furnishing</title>
-  <!-- Link to CSS -->
-  <link rel="stylesheet" href="css/styles.css" />
-
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <!-- Bootstrap 5 -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    /> -->
 
     <!-- google font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Nunito+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-<!-- favicon -->
-<link rel="shortcut icon" href="online-home-furnishing.svg" type="image/svg+xml">
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  </head>
 
-</head>
+  <body>
+    <!-- Header -->
+    <header class="header" data-header>
+      <div class="container">
+        <button
+          class="nav-toggle-btn"
+          aria-label="toggle menu"
+          data-nav-toggler
+        >
+          <ion-icon
+            name="menu-outline"
+            aria-hidden="true"
+            class="menu-icon"
+          ></ion-icon>
+          <ion-icon
+            name="close-outline"
+            aria-label="true"
+            class="close-icon"
+          ></ion-icon>
+        </button>
 
-<body>
+        <a href="#" class="logo">Online Home Furnishing</a>
 
-  <!-- Header -->
-  <header>
+        <nav class="navbar" data-navbar>
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <a href="#home" class="navbar-link" data-nav-link>Home</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#Tables" class="navbar-link" data-nav-link>Tables</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#Sofa" class="navbar-link" data-nav-link>Sofa</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#Chairs" class="navbar-link" data-nav-link>Chairs</a>
+            </li>
+
+            <li class="navbar-item">
+              <a href="#About Us" class="navbar-link" data-nav-link>About Us</a>
+            </li>
+          </ul>
+
+          <a href="#" class="navbar-action-btn">Log In</a>
+        </nav>
+        <div class="header-actions">
+          <button class="action-btn" aria-label="Search">
+            <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+          <button class="action-btn user" aria-label="User">
+            <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+          </button>
+
+          <button class="action-btn" aria-label="cart">
+            <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+
+            <span class="btn-badge">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- <header>
     <div class="header" id="home">
       <nav id="navbar-example2"
         class="navbar bg-body-tertiary px-3 mb-3 fixed-top navbar navbar-expand-lg navbar-light bg-dark navbar-dark"
         style="background-color: #393646 !important">
 
-        <div class="container-fluid">
-          <!-- <a class="navbar-brand" href="#">
+        <div class="container-fluid"> -->
+    <!-- <a class="navbar-brand" href="#">
                   <img src="image/vecteezy_furniture-logo-home-furnishing-design-room-icon_7943793.jpg" width="20" height="24" alt="logo">
               </a> -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -76,17 +148,17 @@
                 <a class="nav-link" href="#cabinet">Cabinets</a>
               </li>
             </ul>
-          </div>
-          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+          </div> -->
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
               </svg> -->
-        </div>
+    </div>
       </nav>
     </div>
   </header>
 
-  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
-    data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+  <!-- <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
+    data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0"> -->
 
     <!-- Table -->
     <section class="table" id="table">
@@ -175,18 +247,24 @@
       </div>
     </section>
 
-<!-- custom js link -->
-<script src="js/script.js" defer></script>
+    <!-- custom js link -->
+    <script src="js/script.js" defer></script>
 
-<!-- ionicon link -->
+    <!-- ionicon link -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
       integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
       crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
       integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
-      crossorigin="anonymous"></script>
-</body>
-
+      crossorigin="anonymous"></script> -->
+  </body>
 </html>
