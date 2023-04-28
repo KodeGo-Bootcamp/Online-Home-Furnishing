@@ -20,6 +20,8 @@ The online home furnishing project aims to differentiate itself from other onlin
 
 **Github Page Link:**
 
+https://github.com/KodeGo-Bootcamp/Online-Home-Furnishing?fbclid=IwAR0bYGUSMRKBU7Ap_7L_6XXxUKAuK_mgC6lB8LICFFZWoyefVs8ADZtcWB4
+
 ## Project Goals / Services provided by the application
 
 1. 
@@ -31,16 +33,16 @@ The online home furnishing project aims to differentiate itself from other onlin
 ## TECHNOLOGIES and VERSION
 
 1. HTML , CSS, and Javascript
-2. PHP
-3. Laravel
+2. Bootstrap
+3. 
 
 ## TEAM CONTRIBUTORS:
 
-1. Member name 1
-2. Member name 2
-3. Member name 3
-4. Member name 4
-5. Member name 5
+1. Raymond King Usman
+2. Gilbert Terbio
+3. Regie Marzan
+4. Benjie Gorgod
+
 
 ## OUTSIDE CONTRIBUTORS:
 
