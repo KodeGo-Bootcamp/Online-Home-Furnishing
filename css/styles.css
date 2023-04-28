@@ -1,10 +1,11 @@
 :root {
   /* colors */
-  --bright-yellow-crayola: hsl(36, 94%, 57%);
+  --wood: #A27B5C;
+  --cream: #DCD7C9;
+  --pantone-blue-green:#3F4E4F;
+  --dark-blue: #2C3639;
   --portland-orange: hsl(15, 84%, 57%);
-  --battleship-gray: hsl(0, 0%, 53%);
-  --silver-chalice: hsl(0, 0%, 70%);
-  --spanish-gray: hsl(0, 0%, 60%);
+  /* --spanish-gray: hsl(0, 0%, 60%);
   --sonic-silver: hsl(208, 7%, 46%);
   --raisin-black: hsl(228, 6%, 17%);
   --eerie-black: hsl(210, 3%, 13%);
@@ -14,12 +15,12 @@
   --amber: hsl(45, 100%, 51%);
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
-  --onyx: hsl(220, 2%, 24%);
+  --onyx: hsl(220, 2%, 24%); */
 
   /* typography */
-  --ff-bangers: "Bangers", cursive;
-  --ff-carter_one: "Carter One", cursive;
-  --ff-nunito_sans: "Nunito Sans", sans-serif;
+  --ff-Cardo: 'Cardo', serif;
+  --ff-Oswald: 'Oswald', sans-serif;
+  --ff-Monteserrat: 'Montserrat', sans-serif;
 
   --fs-1: 6.5rem;
   --fs-2: 3.2rem;
@@ -94,14 +95,14 @@ address {
 }
 
 html {
-  font-family: var(--ff-nunito_sans);
+  font-family: var(--ff-Monteserrat);
   font-size: 10px;
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--white);
-  color: var(--black);
+  background-color: white;
+  color: black;
   font-size: 1.6rem;
   line-height: 1.5;
   height: 300vh;
@@ -116,15 +117,15 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: hsl(0, 0%, 98%);
+  background-color:white;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: hsl(0, 0%, 80%);
+  background-color:gray;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: hsl(0, 0%, 70%);
+  background-color: gray;
 }
 
 /* reused style */
@@ -143,7 +144,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--cream);
   padding-block: 20px;
   z-index: 4;
 }
@@ -176,7 +177,7 @@ body {
 }
 
 .logo {
-  font-family: var(--ff-carter_one);
+  font-family: var(--ff-Cardo);
   font-size: 3rem;
 }
 
@@ -196,7 +197,7 @@ body {
   top: -8px;
   right: -10px;
   background-color: var(--portland-orange);
-  color: var(--white);
+  color: white;
   font-size: var(--fs-8);
   min-width: 18px;
   height: 18px;
@@ -213,9 +214,9 @@ body {
   position: fixed;
   top: 85px;
   left: -320px;
-  bottom: 0;
-  background-color: var(--white);
-  max-width: 320px;
+  bottom: 70px;
+  background-color:var(--cream);
+  max-width: 300px;
   width: 100%;
   padding: 20px 10px;
   box-shadow: var(--shadow-2);
@@ -230,7 +231,7 @@ body {
 }
 
 .navbar-link {
-  color: var(--eerie-black);
+  color: black;
   font-size: var(--fs-6);
   padding: 10px 15px;
 }
@@ -239,10 +240,10 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  right: 25px;
+  right: 5px;
   padding: 15px;
-  background-color: var(--sonic-silver);
-  color: var(--white);
+  background-color: var(--dark-blue);
+  color: white;
   font-weight: var(--fw-700);
   text-transform: uppercase;
   text-align: center;
