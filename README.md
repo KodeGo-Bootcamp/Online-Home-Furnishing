@@ -1,8 +1,8 @@
 # Furniture-Store
 
-**TEAM NAME : (Online Home Furnishing | Mini-Project 2)**
+# TEAM NAME : (Online Home Furnishing | Mini-Project 2)
 
-**Background Of The project:**
+# Background Of The project:
 
 The online home furnishing project aims to provide a convenient and efficient way for customers to purchase furniture and home decor items through an online platform. The home furnishing industry has seen a significant increase in demand over the years, with more and more consumers seeking to decorate and enhance their living spaces. However, traditional brick-and-mortar furniture stores often have limited inventory and can be inconvenient for customers to visit, especially for those with busy schedules or limited mobility.
 
@@ -12,15 +12,13 @@ To ensure customer satisfaction, the project team will partner with reputable fu
 
 The online home furnishing project aims to differentiate itself from other online furniture retailers by providing personalized customer service and expert advice through its online chat and phone support. Customers will be able to ask questions and receive recommendations from knowledgeable home decor specialists who can help them create the perfect look for their home.
 
-[**Sitemap:**](https://www.figma.com/file/qrRpgW9uygt0O8AP6ZP65G/Untitled?type=design&node-id=0%3A1&t=0TVHmYfv2wGSGdyh-1)
+# [**Sitemap**](https://www.figma.com/file/qrRpgW9uygt0O8AP6ZP65G/Untitled?type=design&node-id=0%3A1&t=0TVHmYfv2wGSGdyh-1)
 
-**Wireframe LFD Link:**
+# Wireframe LFD Link:
 
-**Wireframe HFD Link:**
+# Wireframe HFD Link:
 
-**Github Page Link:**
-
-https://github.com/KodeGo-Bootcamp/Online-Home-Furnishing?fbclid=IwAR0bYGUSMRKBU7Ap_7L_6XXxUKAuK_mgC6lB8LICFFZWoyefVs8ADZtcWB4
+# [Github Page Link](https://github.com/KodeGo-Bootcamp/Online-Home-Furnishing?fbclid=IwAR0bYGUSMRKBU7Ap_7L_6XXxUKAuK_mgC6lB8LICFFZWoyefVs8ADZtcWB4)
 
 ## Project Goals / Services provided by the application
 
