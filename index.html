@@ -1,274 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="Online Home Furnishing" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta
       name="description"
       content="This is an Online Furniture Store made by Group 4 from WD47"
     />
+    <meta name="title" content="Online Home Furnishing" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Online Home Furnishing</title>
-    <!-- Link to CSS -->
-    <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Bootstrap 5 -->
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    /> -->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  
 
-    <!-- google font -->
-    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Oswald" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Montserrat:300" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
 
-    <!-- favicon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
-    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/logo-1.jpg">
+
   </head>
 
   <body>
-    <!-- Header -->
-    <header class="header" data-header>
-      <div class="container">
-        <button
-          class="nav-toggle-btn"
-          aria-label="toggle menu"
-          data-nav-toggler
-        >
-          <ion-icon
-            name="menu-outline"
-            aria-hidden="true"
-            class="menu-icon"
-          ></ion-icon>
-          <ion-icon
-            name="close-outline"
-            aria-label="true"
-            class="close-icon"
-          ></ion-icon>
-        </button>
-
-        <a href="#" class="logo">Online Home Furnishing</a>
-
-        <nav class="navbar" data-navbar>
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <a href="#home" class="navbar-link" data-nav-link>Home</a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="#Tables" class="navbar-link" data-nav-link>Tables</a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="#Sofa" class="navbar-link" data-nav-link>Sofa</a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="#Chairs" class="navbar-link" data-nav-link>Chairs</a>
-            </li>
-
-            <li class="navbar-item">
-              <a href="#About Us" class="navbar-link" data-nav-link>About Us</a>
-            </li>
-          </ul>
-
-          <a href="#" class="navbar-action-btn">Log In</a>
-        </nav>
-        <div class="header-actions">
-          <button class="action-btn" aria-label="Search">
-            <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
-          </button>
-
-          <button class="action-btn user" aria-label="User">
-            <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-          </button>
-
-          <button class="action-btn" aria-label="cart">
-            <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-
-            <span class="btn-badge">0</span>
-          </button>
-        </div>
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+      <div class="jumper">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-    </header>
+    </div>
+    <!-- ***** Preloader End ***** -->
 
-    <main>
-      <article>
-
-        <!-- HERO Section -->
-
-
-
-    <!-- custom js link -->
-    <script src="js/script.js" defer></script>
-
-    <!-- ionicon link -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-  </body>
-</html>
-
-
-    <!-- <header>
-    <div class="header" id="home">
-      <nav id="navbar-example2"
-        class="navbar bg-body-tertiary px-3 mb-3 fixed-top navbar navbar-expand-lg navbar-light bg-dark navbar-dark"
-        style="background-color: #393646 !important">
-
-        <div class="container-fluid"> -->
-    <!-- <a class="navbar-brand" href="#">
-                  <img src="image/vecteezy_furniture-logo-home-furnishing-design-room-icon_7943793.jpg" width="20" height="24" alt="logo">
-              </a> -->
-    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"
+            ><h2>Online <em>Home Furnishing</h2></em></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-
-                <a class="nav-link active" aria-current="page" href="#home"><svg xmlns="http://www.w3.org/2000/svg"
-                    width="30" height="30" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-                    <path
-                      d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
-                  </svg></a>
-              </li>
-              <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-success" type="submit" title="Search">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-search" viewBox="0 0 16 16">
-                    <path
-                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-                </button>
-              </form>
-              <li class="nav-item">
-                <a class="nav-link" href="#table">Table & Desk</a>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html"
+                  >Home
+                  <span class="sr-only">(current)</span>
+                </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#bed">Beds</a>
+                <a class="nav-link" href="products.html">Our Products</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#sofas">Sofas</a>
+                <a class="nav-link" href="about.html">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#cabinet">Cabinets</a>
+                <a class="nav-link" href="contact.html">Contact Us</a>
               </li>
             </ul>
-          </div> -->
-    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-              </svg> -->
-    <!-- </div>
+          </div>
+        </div>
       </nav>
+    </header>
+
+    <!-- Page Content -->
+    <!-- Banner Starts Here -->
+    <div class="banner header-text">
+      <div class="owl-banner owl-carousel">
+        <div class="banner-item-01">
+          <div class="text-content">
+            <h4>Best Offer</h4>
+            <h2>New Arrivals On Sale</h2>
+          </div>
+        </div>
+        <div class="banner-item-02">
+          <div class="text-content">
+            <h4>Flash Deals</h4>
+            <h2>Get your best products</h2>
+          </div>
+        </div>
+        <div class="banner-item-03">
+          <div class="text-content">
+            <h4>Last Minute</h4>
+            <h2>Grab last minute deals</h2>
+          </div>
+        </div>
+      </div>
     </div>
-  </header>
+    <!-- Banner Ends Here -->
 
-  <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
-    data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0"> -->
-
-    <!-- Table -->
-    <!-- <section class="table" id="table">
-      <div class="container text-center">
+    <div class="latest-products">
+      <div class="container">
         <div class="row">
-          <div class="col">
-            <img class="table" src="image/Tables/Dennise-8-Seater-.jpg" alt="table" />
-            Dining Table
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>Latest Products</h2>
+              <a href="products.html"
+                >view all products <i class="fa fa-angle-right"></i
+              ></a>
+            </div>
           </div>
-          <div class="col">
-            <img class="table" src="image/Tables/TAD-SANTIAGO-140-OFFICE-TABLE-FRONT.jpg" alt="table" />
-            Office Desk
+          <div class="col-md-4">
+            <div class="product-item">
+              <img src="assets/images/table-1.jpg" alt="" />
+              <div class="down-content">
+                <h4>Round Dining Table</h4>
+                <h6>&#8369;21,865</h6>
+                <p>
+                  The table features a round top crafted from high-quality
+                  weathered oak finish, while the base is made of metal with a
+                  unique wrap-around design that adds a touch of industrial
+                  style. Measuring 48 inches in diameter, this table comfortably
+                  seats up to four people.
+                </p>
+                <ul class="stars">
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="col">
-            <img class="table" src="image//Tables/flisat-childrens-desk-adjustable__0876447_pe636017_s5.jpg"
-              alt="table" />
-            Kids Table
+          <div class="col-md-4">
+            <div class="product-item">
+            <img src="assets/images/table-2.jpg" alt="" />
+              <div class="down-content">
+                <h4>5-piece Dining Set</h4>
+                <h6>&#8369;19,299</h6>
+                <p>
+                  This set includes a rectangular dining table and four matching
+                  chairs with sleek, tapered legs and a mid-century modern
+                  design.The table is crafted from sturdy, natural wood finish
+                  and black accents, while the chairs are upholstered in a
+                  comfortable, easy-to-clean fabric.
+                </p>
+                <ul class="stars">
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-item">
+            <img src="assets/images/table-3.jpg" alt="" />
+              <div class="down-content">
+                <h4>Simple Living Dining Set</h4>
+                <h6>&#8369;22,345</h6>
+                <p>
+                  The set includes a rectangular dining table and four chairs,
+                  all crafted from high-quality rubberwood for durability and
+                  longevity. The table features a white finish with a natural
+                  wood top, while the chairs are finished in white with natural
+                  wood seats.
+                </p>
+                <ul class="stars">
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-item">
+            <img src="assets/images/bed-1.jpg" alt="" />
+              <div class="down-content">
+               <h4>Solid Wood Spindle Bed</h4>
+                <h6>&#8369; 33,599</h6>
+                <p>
+                  Crafted from high-quality solid wood, the bed features a
+                  spindle headboard and footboard design that adds a touch of
+                  elegance and sophistication to the room. The platform design
+                  eliminates the need for a box spring, providing ample support
+                  for your mattress while also giving the bed a low profile
+                  look.
+                </p>
+                <ul class="stars">
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-item">
+            <img src="assets/images/bed-2.jpg" alt="" /></a>
+              <div class="down-content">
+              <h4>Modern Wooden Bed</h4>
+                <h6>&#8369; 50,368</h6>
+                <p>
+                  Crafted from high-quality solid wood, this bed features a
+                  low-profile design and a sturdy platform base that eliminates
+                  the need for a box spring. The clean lines and natural wood
+                  finish give the bed a modern and contemporary look that is
+                  sure to complement any decor style. Available in a range of
+                  sizes.
+                </p>
+                <ul class="stars">
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-item">
+            <img src="assets/images/bed-3.jpg" alt="" />
+              <div class="down-content">
+              <h4>Grid-tufted Bed</h4>
+                <h6>&#8369; 55,690</h6>
+                <p>
+                  Featuring a grid-tufted headboard with a charcoal grey
+                  upholstery, this bed adds a touch of elegance and
+                  sophistication to the room. The sturdy wood frame and solid
+                  wood legs provide ample support, while the padded headboard
+                  provides a comfortable spot to lean back and relax. Available
+                  in a range of sizes, this panel bed is a versatile option that
+                  can fit any room.
+                </p>
+                <ul class="stars">
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                  <li><i class="fa fa-star"></i></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-    <br /> -->
+    </div>
 
-    <!-- Beds -->
-    <!-- <section class="beds" id="bed">
-      <div class="container text-center">
+    <div class="best-features">
+      <div class="container">
         <div class="row">
-          <div class="col">
-            <img class="table" src="image/Tables/Dennise-8-Seater-.jpg" alt="table" />
-            Dining Table
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h2>About Online Home Furnishing</h2>
+            </div>
           </div>
-          <div class="col">
-            <img class="table" src="image/Tables/TAD-SANTIAGO-140-OFFICE-TABLE-FRONT.jpg" alt="table" />
-            Office Desk
+          <div class="col-md-6">
+            <div class="left-content">
+              <h4>Looking for the best products?</h4>
+              <p>
+                Online home furnishing is the process of purchasing furniture
+                and other decor items for your home from an online retailer.
+                With the convenience of shopping from home, online home
+                furnishing has become increasingly popular in recent years.
+                Online retailers offer a wide range of furniture and decor
+                options, including beds, sofas, chairs, tables, rugs, and more.
+                Customers can browse a vast selection of products, compare
+                prices and styles, and read customer reviews before making a
+                purchase. Online home furnishing provides the flexibility to
+                shop at any time, and many retailers offer free shipping and
+                easy returns, making it a convenient and hassle-free way to
+                decorate and furnish your home.
+                <a rel="nofollow" href="contact.html">Contact us</a>
+                for more info.
+              </p>
+              <!-- <ul class="featured-list">
+                <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+                <li><a href="#">Consectetur an adipisicing elit</a></li>
+                <li><a href="#">It aquecorporis nulla aspernatur</a></li>
+                <li><a href="#">Corporis, omnis doloremque</a></li>
+                <li><a href="#">Non cum id reprehenderit</a></li>
+              </ul> -->
+              <a href="about.html" class="filled-button">Read More</a>
+            </div>
           </div>
-          <div class="col">
-            <img class="table" src="image//Tables/flisat-childrens-desk-adjustable__0876447_pe636017_s5.jpg"
-              alt="table" />
-            Kids Table
+          <div class="col-md-6">
+            <div class="right-image">
+              <img src="assets/images/feature-image.jpg" alt="" />
+            </div>
           </div>
         </div>
       </div>
-    </section>
-    <br /> -->
+    </div>
 
-    <!-- sofas -->
-    <!-- <section class="sofas" id="sofas">
-      <div class="container text-center">
+    <div class="call-to-action">
+      <div class="container">
         <div class="row">
-          <div class="col">
-            <img class="table" src="image/Tables/Dennise-8-Seater-.jpg" alt="table" />
-            Dining Table
-          </div>
-          <div class="col">
-            <img class="table" src="image/Tables/TAD-SANTIAGO-140-OFFICE-TABLE-FRONT.jpg" alt="table" />
-            Office Desk
-          </div>
-          <div class="col">
-            <img class="table" src="image//Tables/flisat-childrens-desk-adjustable__0876447_pe636017_s5.jpg"
-              alt="table" />
-            Kids Table
+          <div class="col-md-12">
+            <div class="inner-content">
+              <div class="row">
+                <div class="col-md-8">
+                  <h4>
+                    Shop smarter, not harder |<em> Home Furnishing</em> Products
+                  </h4>
+                  <p>
+                    Make your home the envy of the neighborhood with our trendy
+                    and affordable home furnishing options!
+                  </p>
+                </div>
+                <div class="col-md-4">
+                  <a href="products.html" class="filled-button">Purchase Now</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-    <br /> -->
+    </div>
 
-    <!-- cabinets -->
-    <!-- <section class="cabinets" id="cabinet">
-      <div class="container text-center">
+    <footer>
+      <div class="container">
         <div class="row">
-          <div class="col">
-            <img class="table" src="image/Tables/Dennise-8-Seater-.jpg" alt="table" />
-            Dining Table
-          </div>
-          <div class="col">
-            <img class="table" src="image/Tables/TAD-SANTIAGO-140-OFFICE-TABLE-FRONT.jpg" alt="table" />
-            Office Desk
-          </div>
-          <div class="col">
-            <img class="table" src="image//Tables/flisat-childrens-desk-adjustable__0876447_pe636017_s5.jpg"
-              alt="table" />
-            Kids Table
+          <div class="col-md-12">
+            <div class="inner-content">
+              <p>
+                Copyright &copy; Online Home Furnishing
+                <a
+                  rel="nofollow noopener"
+                  href="https://github.com/orgs/KodeGo-Bootcamp/teams/online-home-furnishing"
+                  target="_blank"
+                  >Group 4</a
+                >
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </section> -->
+    </footer>
 
-        <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
-      crossorigin="anonymous"></script> -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/accordions.js"></script>
+
+    <script language="text/Javascript">
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t) {
+        //declaring the array outside of the
+        if (!cleared[t.id]) {
+          // function makes it static and global
+          cleared[t.id] = 1; // you could use true and false, but that's more typing
+          t.value = ""; // with more chance of typos
+          t.style.color = "#fff";
+        }
+      }
+    </script>
+  </body>
+</html>
