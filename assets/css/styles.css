@@ -44,20 +44,20 @@ ul.social-icons li a {
   height: 50px;
   display: inline-block;
   line-height: 50px;
-  background-color: #A27B5C;
-  color:#DCD7C9;
+  background-color: #a27b5c;
+  color: #dcd7c9;
   font-size: 18px;
   text-align: center;
   transition: all 0.3s;
 }
 
 ul.social-icons li a:hover {
-  background-color:#DCD7C9;
-  color: #A27B5C;
+  background-color: #dcd7c9;
+  color: #a27b5c;
 }
 
 a.filled-button {
-  background-color: #A27B5C;
+  background-color: #a27b5c;
   color: #fff;
   font-size: 14px;
   text-transform: capitalize;
@@ -69,7 +69,7 @@ a.filled-button {
 }
 
 a.filled-button:hover {
-  background-color: #2C3639;
+  background-color: #2c3639;
   color: #fff;
 }
 
@@ -107,7 +107,7 @@ a.filled-button:hover {
 }
 
 .page-heading .text-content h4 {
-  color: #A27B5C;
+  color: #a27b5c;
   font-size: 22px;
   text-transform: uppercase;
   font-weight: 700;
@@ -123,7 +123,7 @@ a.filled-button:hover {
 
 #preloader {
   overflow: hidden;
-  background:#A27B5C;
+  background: #a27b5c;
   left: 0;
   right: 0;
   top: 0;
@@ -236,7 +236,7 @@ header .navbar {
 .background-header .navbar-nav .nav-link.active,
 .background-header .navbar-nav .nav-link.show,
 .background-header .navbar-nav .show > .nav-link {
-  color: #A27B5C !important;
+  color: #a27b5c !important;
 }
 .navbar .navbar-brand {
   float: left;
@@ -255,7 +255,7 @@ header .navbar {
 }
 .navbar .navbar-brand h2 em {
   font-style: normal;
-  color: #A27B5C;
+  color: #a27b5c;
 }
 #navbarResponsive {
   z-index: 999;
@@ -282,7 +282,7 @@ header .navbar {
 .navbar .navbar-nav .show > .nav-link {
   color: #fff;
   padding-bottom: 25px;
-  border-bottom: 3px solid #A27B5C;
+  border-bottom: 3px solid #a27b5c;
 }
 .navbar .navbar-toggler-icon {
   background-image: none;
@@ -299,7 +299,7 @@ header .navbar {
 }
 .navbar .navbar-toggler-icon:after {
   content: "\f0c9";
-  color: #A27B5C;
+  color: #a27b5c;
   font-size: 18px;
   line-height: 26px;
   font-family: "FontAwesome";
@@ -349,7 +349,7 @@ header .navbar {
 }
 
 .banner .text-content h4 {
-  color: #A27B5C;
+  color: #a27b5c;
   font-size: 22px;
   text-transform: uppercase;
   font-weight: 700;
@@ -407,7 +407,7 @@ header .navbar {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
-  color: #A27B5C;
+  color: #a27b5c;
 }
 
 .product-item {
@@ -448,7 +448,7 @@ header .navbar {
 }
 
 .product-item .down-content ul li i {
-  color: #A27B5C;
+  color: #a27b5c;
   font-size: 14px;
 }
 
@@ -528,11 +528,11 @@ header .navbar {
 }
 
 .best-features ul.featured-list li a:hover {
-  color: #A27B5C;
+  color: #a27b5c;
 }
 
 .best-features ul.featured-list li a:hover::before {
-  background-color: #A27B5C;
+  background-color: #a27b5c;
 }
 
 .best-features .filled-button {
@@ -567,6 +567,31 @@ header .navbar {
   margin-top: 12px;
 }
 
+.to-top {
+  background: #a27b5c;
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: 1f1f1f;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+
 /* Footer */
 
 footer {
@@ -584,7 +609,7 @@ footer .inner-content p {
 }
 
 footer .inner-content p a {
-  color: #A27B5C;
+  color: #a27b5c;
   margin-left: 3px;
 }
 
@@ -614,7 +639,7 @@ footer .inner-content p a {
 
 .products .filters ul li.active,
 .products .filters ul li:hover {
-  color: #A27B5C;
+  color: #a27b5c;
 }
 
 .products ul.pages {
@@ -641,8 +666,8 @@ footer .inner-content p a {
 
 .products ul.pages li a:hover,
 .products ul.pages li.active a {
-  background-color: #A27B5C;
-  border-color: #A27B5C;
+  background-color: #a27b5c;
+  border-color: #a27b5c;
   color: #fff;
 }
 
@@ -677,7 +702,7 @@ footer .inner-content p a {
 
 .team-member .thumb-container .hover-effect {
   position: absolute;
-  background-color:#DCD7C9;
+  background-color: #dcd7c9;
   top: 0;
   left: 0;
   width: 100%;
@@ -704,7 +729,7 @@ footer .inner-content p a {
   li
   a:hover {
   background-color: #fff;
-  color: #A27B5C;
+  color: #a27b5c;
 }
 
 .team-member:hover .hover-effect {
@@ -721,7 +746,7 @@ footer .inner-content p a {
 .team-member .down-content span {
   display: block;
   font-size: 13px;
-  color: #A27B5C;
+  color: #a27b5c;
   font-weight: 500;
   margin-bottom: 20px;
 }
@@ -852,7 +877,7 @@ footer .inner-content p a {
 }
 
 .contact-form button.filled-button {
-  background-color: #A27B5C;
+  background-color: #a27b5c;
   color: #fff;
   font-size: 14px;
   text-transform: capitalize;
@@ -867,7 +892,7 @@ footer .inner-content p a {
 }
 
 .contact-form button.filled-button:hover {
-  background-color: #2C3639;
+  background-color: #2c3639;
   color: #fff;
 }
 
@@ -884,11 +909,11 @@ footer .inner-content p a {
 }
 
 .accordion a:hover {
-  color: #A27B5C !important;
+  color: #a27b5c !important;
 }
 
 .accordion a.active {
-  color: #A27B5C !important;
+  color: #a27b5c !important;
 }
 
 .accordion li .content {
@@ -1017,7 +1042,7 @@ footer .inner-content p a {
   .navbar .navbar-nav .nav-link.active,
   .navbar .navbar-nav .nav-link.show,
   .navbar .navbar-nav .show > .nav-link {
-    color: #A27B5C !important;
+    color: #a27b5c !important;
     border-bottom: none !important;
     padding-bottom: 15px;
   }
