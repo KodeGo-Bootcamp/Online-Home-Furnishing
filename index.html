@@ -340,9 +340,6 @@
       </div>
     </div>
 
-    <div onclick="scrollToTop()" class="scrollTop">
-      <i class="fa-solid fa-chevron-up"></i>
-    </div>
 
     <footer>
       <div class="container">
@@ -363,6 +360,16 @@
       </div>
     </footer>
 
+    <div onclick="scrollToTop()" class="scrollTop">
+      <i class="fa-solid fa-chevron-up"></i>
+    </div>
+
+<script>
+      function scrollToTop(){
+        window.scrollTo(0, 0);
+      }
+    </script>
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -374,11 +381,6 @@
     <script src="assets/js/isotope.js"></script>
     <script src="assets/js/accordions.js"></script>
   
-    <script>
-      function scrollToTop(){
-        window.scrollTo(0, 0);
-      }
-    </script>
 
     <script language="text/Javascript">
       cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
