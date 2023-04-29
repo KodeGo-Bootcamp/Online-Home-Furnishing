@@ -18,6 +18,8 @@
 
     <title>Online Home Furnishing</title>
 
+    <script src="https://kit.fontawesome.com/aab2d75e67.js" crossorigin="anonymous"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   
@@ -338,6 +340,10 @@
       </div>
     </div>
 
+    <div onclick="scrollToTop()" class="scrollTop">
+      <i class="fa-solid fa-chevron-up"></i>
+    </div>
+
     <footer>
       <div class="container">
         <div class="row">
@@ -349,8 +355,7 @@
                   rel="nofollow noopener"
                   href="https://github.com/orgs/KodeGo-Bootcamp/teams/online-home-furnishing"
                   target="_blank"
-                  >Group 4</a
-                >
+                  >Group 4</a>
               </p>
             </div>
           </div>
@@ -368,7 +373,12 @@
     <script src="assets/js/slick.js"></script>
     <script src="assets/js/isotope.js"></script>
     <script src="assets/js/accordions.js"></script>
-    <script src="assets/js/to-top.js"></script>
+  
+    <script>
+      function scrollToTop(){
+        window.scrollTo(0, 0);
+      }
+    </script>
 
     <script language="text/Javascript">
       cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
