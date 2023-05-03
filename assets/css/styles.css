@@ -686,7 +686,7 @@ footer .inner-content p a {
 .team-member img {
   width: 100%;
   overflow: hidden;
-  height:285px;
+  height: 350px;
 }
 
 .team-member .down-content {
@@ -929,83 +929,66 @@ footer .inner-content p a {
 }
 
 /* Responsive Style */
-@media (max-width: 280px) {
-  .navbar-brand h2 {
-    font-size: 16px !important;
+@media (width = 280px) {
+  .navbar .navbar-brand h2 {
+    font-size: 17px;
   }
 
-  .banner .text-content {
-    width: 90%;
-    margin-left: 5%;
-  }
-  .banner .text-content h4 {
-    font-size: 22px;
-  }
-
-  .banner .text-content h2 {
-    font-size: 36px;
-    letter-spacing: 0.5px;
-  }
-  .banner-item-01,
-  .banner-item-02,
-  .banner-item-03 {
-    padding: 180px 0px;
-  }
-  .page-heading .text-content h4 {
-    font-size: 22px;
-  }
-
-  .page-heading .text-content h2 {
-    font-size: 36px;
-    letter-spacing: 0.5px;
-  }
-  .latest-products .section-heading a {
-    float: none;
-    margin-top: 0px;
-    display: block;
+  .product-item .down-content h6 {
+    position: static;
     margin-bottom: 20px;
   }
-  .product-item .down-content h4 {
-    margin-bottom: 20px !important;
-  }
-  .product-item .down-content h6 {
-    position: absolute !important;
-    top: 30px !important;
-    right: 30px !important;
-  }
   .product-item .down-content span {
-    position: absolute !important;
-    right: 30px !important;
-    bottom: 30px !important;
+    margin-bottom: 20px;
+    margin-right: 75px;
   }
-  .best-features .left-content {
-    margin-bottom: 30px;
-  }
-  .call-to-action .inner-content {
-    text-align: center;
-  }
-  .call-to-action .inner-content .filled-button {
-    text-align: center;
+  .team-member img {
     width: 100%;
-    margin-top: 20px;
-  }
-  .about-features img {
-    margin-bottom: 30px;
-  }
-  .service-item {
-    margin-bottom: 30px;
-  }
-  .find-us #map {
-    margin-bottom: 30px;
-  }
-  .find-us .left-content {
-    margin-left: 0px;
-  }
-  .send-message .accordion {
-    margin-top: 30px;
-    margin-left: 0px;
+    overflow: hidden;
+    height: 290px !important;
   }
 }
+
+@media (width = 320px) {
+  .navbar .navbar-brand h2 {
+    font-size: 17px;
+  }
+  .team-member img {
+    width: 100%;
+    overflow: hidden;
+    height: 300px !important;
+  }
+}
+
+@media (width = 360px) {
+  .product-item .down-content h6 {
+    position: static !important;
+    margin-bottom: 20px;
+  }
+}
+
+@media (width = 412px) {
+  .team-member img {
+    width: 100%;
+    overflow: hidden;
+    height: 450px !important;
+  }
+}
+
+@media (width = 511px) {
+  .team-member img {
+    height: 450px !important;
+  }
+}
+
+@media (width = 540px) {
+  .team-member img {
+    width: 100%;
+    overflow: hidden;
+    height: 450px;
+  }
+}
+
 @media (max-width: 768px) {
   .banner .text-content {
     width: 90%;
@@ -1042,12 +1025,12 @@ footer .inner-content p a {
     margin-bottom: 20px !important;
   }
   .product-item .down-content h6 {
-    position: sticky !important;
+    position: absolute;
     top: 30px !important;
-    right: 20px !important;
+    right: 30px !important;
   }
   .product-item .down-content span {
-    position: absolute !important;
+    position: absolute;
     right: 30px !important;
     bottom: 30px !important;
   }
@@ -1080,7 +1063,26 @@ footer .inner-content p a {
   }
 }
 
-@media (max-width: 1024px) {
+@media (width = 820px) {
+  .team-member img {
+    width: 100%;
+    overflow: hidden;
+    height: 200px;
+  }
+}
+
+@media (width = 912px) {
+  .product-item .down-content span {
+    position: relative;
+  }
+  .team-member img {
+    width: 100%;
+    overflow: hidden;
+    height: 200px;
+  }
+}
+
+@media (width <= 992px) {
   .navbar .navbar-brand {
     position: absolute;
     left: 30px;
@@ -1125,14 +1127,20 @@ footer .inner-content p a {
     margin-bottom: 10px;
   }
   .product-item .down-content h6 {
-    position: relative;
+    position: static;
     top: 0;
     right: 0;
     margin-bottom: 20px;
   }
   .product-item .down-content span {
-    position: relative;
     right: 0;
     bottom: 0;
+  }
+}
+
+@media (width >= 1024px) {
+  .product-item .down-content h6 {
+    position: static;
+    margin-bottom: 20px;
   }
 }
