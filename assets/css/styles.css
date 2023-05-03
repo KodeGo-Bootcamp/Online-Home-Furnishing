@@ -91,7 +91,7 @@ a.filled-button:hover {
 }
 
 .products-heading {
-  background-image: url(../images/products-heading.jpg);
+  background-image: url(../images/products-heading1.jpg);
 }
 
 .about-heading {
@@ -614,6 +614,13 @@ footer .inner-content p a {
 
 .products {
   margin-top: 100px;
+} 
+ 
+.prod-img {
+  transition: transform 0.4s;
+}
+.prod-img:hover{
+  transform: scale(1.2);
 }
 
 .products .filters {
