@@ -14,6 +14,8 @@ The online home furnishing project aims to differentiate itself from other onlin
 
 # [**Sitemap**](https://www.figma.com/file/qrRpgW9uygt0O8AP6ZP65G/Untitled?type=design&node-id=0%3A1&t=0TVHmYfv2wGSGdyh-1)
 
+![](../assets/images/sitemap.jpg)
+
 # Wireframe LFD Link:
 
 # Wireframe HFD Link:
@@ -22,17 +24,17 @@ The online home furnishing project aims to differentiate itself from other onlin
 
 ## Project Goals / Services provided by the application
 
-1. 
-2. 
-3. 
-4. 
-5. 
+1.
+2.
+3.
+4.
+5.
 
 ## TECHNOLOGIES and VERSION
 
 1. HTML , CSS, and Javascript
 2. Bootstrap
-3. 
+3.
 
 ## TEAM CONTRIBUTORS:
 
@@ -41,28 +43,27 @@ The online home furnishing project aims to differentiate itself from other onlin
 3. Regie Marzan
 4. Benjie Gorgod
 
-
 ## OUTSIDE CONTRIBUTORS:
 
-1. 
-2. 
-3. 
+1.
+2.
+3.
 
 ## CURRENT FEATURES IMPLEMENTED
 
 1. Responsive web design
-2. 
-3. 
-4. 
-5. 
+2.
+3.
+4.
+5.
 
 ## TESTING AND DEBUGGING TASKS DONE (POSSIBLE BUGS IN THE APPLICATION)
 
 1. SPEED TEST
 2. SEMANTIC VALIDATION
 3. RESPONSIVE WEB TEST
-4. 
-5. 
+4.
+5.
 
 ## TESTING DONE:
 
