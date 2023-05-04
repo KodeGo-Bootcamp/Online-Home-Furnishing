@@ -242,7 +242,7 @@ header .navbar {
 .background-header .navbar-nav .show > .nav-link {
   color: #a27b5c !important;
 }
-.navbar .navbar-brand {
+.navbar .navbar-brand{
   float: left;
   margin-top: -12px;
   outline: none;
@@ -307,6 +307,28 @@ header .navbar {
   font-size: 18px;
   line-height: 26px;
   font-family: "FontAwesome";
+}
+
+/* add to cart */
+.cart {
+  position: relative;
+}
+/* button{
+  border: none;
+  outline: none;
+  padding: 8px 20px;
+  background: #a27b5c;
+  margin: 5px 30px 0 5px;
+  color: white;
+  cursor: pointer;
+} */
+button.add {
+  background: #a27b5c;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 8px 20px;
+  cursor: pointer;
 }
 
 /* Banner Style */
