@@ -30,9 +30,9 @@ The online home furnishing project aims to differentiate itself from other onlin
 
 ## TECHNOLOGIES and VERSION
 
-1. HTML , CSS, and Javascript
+1. HTML , CSS, and JavaScript/jQuery
 2. Bootstrap
-3. 
+3. Github, APIs, Netlify
 
 ## TEAM CONTRIBUTORS:
 
