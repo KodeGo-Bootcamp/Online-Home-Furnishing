@@ -12,7 +12,7 @@ To ensure customer satisfaction, the project team will partner with reputable fu
 
 The online home furnishing project aims to differentiate itself from other online furniture retailers by providing personalized customer service and expert advice through its online chat and phone support. Customers will be able to ask questions and receive recommendations from knowledgeable home decor specialists who can help them create the perfect look for their home.
 
-# [**Sitemap**](https://www.figma.com/file/qrRpgW9uygt0O8AP6ZP65G/Untitled?type=design&node-id=0%3A1&t=0TVHmYfv2wGSGdyh-1)
+# [**Sitemap**](https://www.figma.com/file/qrRpgW9uygt0O8AP6ZP65G/Untitled?type=design&node-id=0%3A1&t=UQDQCyNpCJ1kXX3Z-1)
 
 # Wireframe LFD Link:
 
