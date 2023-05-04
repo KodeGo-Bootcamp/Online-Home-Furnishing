@@ -30,9 +30,14 @@ The online home furnishing project aims to differentiate itself from other onlin
 
 ## TECHNOLOGIES and VERSION
 
-1. HTML , CSS, and JavaScript/jQuery
-2. Bootstrap
-3. Github, APIs, Netlify
+1. HTML and CSS
+2. JavaScript/jQuery - 
+  [-Flex Slider](https://github.com/woocommerce/FlexSlider)
+  [- Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/)
+  [- Owl Carousel](https://github.com/OwlCarousel2/OwlCarousel2)
+3. Bootstrap
+4. Github, APIs - [Google Maps](https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.1211125912178!2d121.10138141484002!3d14.59217388980783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c78aa2eefe6d%3A0x491accc364f50943!2s80%20Monaco%20St%2C%20Pasig%2C%201611%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1682705175389!5m2!1sen!2sph)
+5. [Netlify](https://effortless-gaufre-cfca22.netlify.app/)
 
 ## TEAM CONTRIBUTORS:
 
