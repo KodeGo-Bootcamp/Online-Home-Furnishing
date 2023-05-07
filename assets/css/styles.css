@@ -19,7 +19,7 @@ p {
 a {
   text-decoration: none !important;
 }
-ul {
+image.png ul {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -242,7 +242,7 @@ header .navbar {
 .background-header .navbar-nav .show > .nav-link {
   color: #a27b5c !important;
 }
-.navbar .navbar-brand{
+.navbar .navbar-brand {
   float: left;
   margin-top: -12px;
   outline: none;
@@ -329,6 +329,26 @@ button.add {
   outline: none;
   padding: 8px 20px;
   cursor: pointer;
+}
+button.add:hover {
+  animation: shake 0.6s infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(1px, 1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, -1px) rotate(-1deg);
+  }
+  75% {
+    transform: translate(2px, -1px) rotate(2deg);
+  }
+  100% {
+    transform: translate(-1px, 1px) rotate(-1deg);
+  }
 }
 /* Banner Style */
 .banner {
@@ -635,12 +655,12 @@ footer .inner-content p a {
 
 .products {
   margin-top: 100px;
-} 
- 
+}
+
 .prod-img {
   transition: transform 0.4s;
 }
-.prod-img:hover{
+.prod-img:hover {
   transform: scale(1.2);
 }
 
@@ -955,6 +975,8 @@ footer .inner-content p a {
   border-bottom: 1px solid #eee;
   padding: 15px 0px;
 }
+
+/* Login page styling */
 
 /* Responsive Style */
 @media (width = 280px) {
