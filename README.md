@@ -32,20 +32,9 @@ The online home furnishing project aims to differentiate itself from other onlin
 
 ## TECHNOLOGIES and VERSION
 
-<<<<<<< HEAD
 1. HTML , CSS, and Javascript
 2. Bootstrap
 3.
-=======
-1. HTML and CSS
-2. JavaScript/jQuery - 
-  [-Flex Slider](https://github.com/woocommerce/FlexSlider)
-  [- Owl Carousel](https://owlcarousel2.github.io/OwlCarousel2/)
-  [- Owl Carousel](https://github.com/OwlCarousel2/OwlCarousel2)
-3. Bootstrap
-4. Github, APIs - [Google Maps](https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.1211125912178!2d121.10138141484002!3d14.59217388980783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c78aa2eefe6d%3A0x491accc364f50943!2s80%20Monaco%20St%2C%20Pasig%2C%201611%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1682705175389!5m2!1sen!2sph)
-5. [Netlify](https://effortless-gaufre-cfca22.netlify.app/)
->>>>>>> 9698376443f990d7755f8aac6b1d26033a0aa36e
 
 ## TEAM CONTRIBUTORS:
 
@@ -85,3 +74,55 @@ The online home furnishing project aims to differentiate itself from other onlin
 ### SCREEN SHOT OF GOOGLE PAGE SPEED INSIGHTS DESKTOP
 
 ## ADDITIONAL POST-RELEASE FEATURES (OPTIONAL)
+
+
+
+<!-- Database tables
+CREATE TABLE IF NOT EXISTS products (
+product_id int(11) NOT NULL AUTO_INCREMENT,
+product_name varchar(100) NOT NULL,
+product_category varchar(100) NOT NULL,
+product_description varchar(255) NOT NULL,
+product_image varchar(255) NOT NULL,
+product_image1 varchar(255) NOT NULL,
+product_image2 varchar(255) NOT NULL,
+product_image3 varchar(255) NOT NULL,
+product_image4 varchar(255) NOT NULL,
+product_price decimal(6,2) NOT NULL, /* 9999.99 */
+product_special_offer integer(2) NOT NULL,
+product_color varchar(100) NOT NULL,
+PRIMARY KEY (product_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS orders (
+order_id int(11) NOT NULL AUTO_INCREMENT,
+order_cost decimal(6,2) NOT NULL,
+order_status varchar(100) NOT NULL DEFAULT 'on_hold',
+user_id int(11) NOT NULL,
+user_phone int(11) NOT NULL,
+user_city varchar(255) NOT NULL,
+user_address varchar(255) NOT NULL,
+order_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY (order_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS order_items (
+item_id int(11) NOT NULL AUTO_INCREMENT,
+order_id int(11) NOT NULL,
+product_id varchar(255) NOT NULL,
+product_name varchar(255) NOT NULL,
+product_image varchar(255) NOT NULL,
+user_id int(11) NOT NULL,
+order_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+PRIMARY KEY (item_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE IF NOT EXISTS users (
+user_id int(11) NOT NULL AUTO_INCREMENT,
+user_name varchar(100) NOT NULL,
+user_email varchar(100) NOT NULL,
+user_password varchar(100) NOT NULL,
+product_image varchar(255) NOT NULL,
+PRIMARY KEY (user_id),
+UNIQUE KEY UX_Constraint (user_email)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1; -->
