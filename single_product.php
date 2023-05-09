@@ -172,7 +172,6 @@ if(isset($_GET['product_id'])){
         
 
         <div class="col-lg-6 col-md-12 col-sm-12">
-          <h6>Bed</h6>
           <h3 class="py-4"><?php echo $row['product_name']; ?></h3>
           <h2>&#8369; <?php echo $row['product_price']; ?></h2>
           <input type="number" value="1" />

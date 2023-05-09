@@ -51,7 +51,7 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           <a class="navbar-brand" href="index.html"
-            ><h2>Home<em>Furnishing</em></h2></a>
+            ><h2>Home<em> Furnishing</em></h2></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -124,17 +124,6 @@
     </div>
     <!-- Banner Ends Here -->
 
-    <!-- Brands -->
-    <section id="brand" class="container">
-      <div class="row">
-        <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="assets/images/brands/brand-05.png" alt="">
-        <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="assets/images/brands/brand-02.png" alt="">
-        <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="assets/images/brands/brand-08.png" alt="">
-        <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="assets/images/brands/brand-04.png" alt="">
-      </div>
-    </section>
-
-
     <!-- Featured Products -->
 
     <section id="featured" class="my-5 pb-5">
@@ -148,8 +137,8 @@
 
       <?php while($row= $featured_products->fetch_assoc()){ ?>
 
-        <div class="product text-center col-lg-3 col-md-4 col-sm-12">
-          <img class="img-fluid mb-3" src="assets/images/<?php echo $row['product_image']; ?>" alt="" />
+        <div class="product text-center img-fluid col-lg-3 col-md-6 col-sm-12">
+        <a href="<?php echo "single_product.php?product_id=". $row['product_id']; ?>"><img class="img-fluid mb-3" src="assets/images/<?php echo $row['product_image']; ?>" alt="" /></a>
           <div class="stars">
             <i class="fa fa-star"></i>
             <i class="fa fa-star"></i>
@@ -159,10 +148,21 @@
           </div>
           <h5 class="p-name"><?php echo $row['product_name']; ?></h5>
           <h4 class="p-price">&#8369;<?php echo $row['product_price']; ?></h4>
-          <a href="<?php echo "single_product.php?product_id=". $row['product_id']; ?>"><button class="add">Buy Now</button></a>
         </div>
-
         <?php } ?>
+      </div>
+    </section>
+
+    <!-- Brands -->
+    <section id="brand" class="container">
+    <div class="container text-center mt-5 py-5">
+        <h3>Partner Brands</h3>
+        <hr />
+      <div class="row">
+        <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="assets/images/brands/brand-05.png" alt="">
+        <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="assets/images/brands/brand-02.png" alt="">
+        <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="assets/images/brands/brand-08.png" alt="">
+        <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="assets/images/brands/brand-04.png" alt="">
       </div>
     </section>
 
