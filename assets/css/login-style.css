@@ -1250,3 +1250,27 @@
     color: #a27b5c;
   }
   
+  /* Register styling */
+
+  #register-form {
+    width: 50%;
+    margin: 5px auto;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #a27b5c;
+  }
+
+  #register-form input{
+    width: 50%;
+    margin: 5px auto;
+  }
+
+  #register-form #register-btn {
+    background-color: #a27b5c;
+    color: white;
+  }
+
+  #register-form #login-url{
+    color: #a27b5c;
+  }
+  
