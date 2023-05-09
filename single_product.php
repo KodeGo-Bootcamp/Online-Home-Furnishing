@@ -1,3 +1,27 @@
+<?php 
+
+include('server/connection.php');
+
+if(isset($_GET['product_id'])){
+
+  $product_id = $_GET['product_id'];
+
+  $stmt = $conn->prepare("SELECT * FROM products WHERE product_id = ?");
+  $stmt->bind_param("i",$product_id);
+
+  $stmt->execute();
+
+  $product = $stmt->get_result();
+
+
+  //no product id was given
+}else{
+
+  header('location: index.php');
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -99,17 +123,20 @@
     <!-- Single Product -->
     <div class="container single-product my-5">
       <div class="row mt-5">
+
+        <?php while($row = $product->fetch_assoc()){ ?>
+
         <div class="col-lg-5 col-md-6 col-sm-12">
           <img
             class="img-fluid w-100 pb-1"
-            src="assets/images/bed-1.jpg"
+            src="assets/images/<?php echo $row['product_image']; ?>"
             alt=""
             id="mainImg"
           />
           <div class="small-img-group">
             <div class="small-img-col">
               <img
-                src="assets/images/table-2.jpg"
+                src="assets/images/<?php echo $row['product_image1']; ?>"
                 width="100%"
                 class="small-img"
                 alt=""
@@ -117,7 +144,7 @@
             </div>
             <div class="small-img-col">
               <img
-                src="assets/images/bed-2.jpg"
+                src="assets/images/<?php echo $row['product_image2']; ?>"
                 width="100%"
                 class="small-img"
                 alt=""
@@ -125,7 +152,7 @@
             </div>
             <div class="small-img-col">
               <img
-                src="assets/images/bed-3.jpg"
+                src="assets/images/<?php echo $row['product_image3']; ?>"
                 width="100%"
                 class="small-img"
                 alt=""
@@ -133,7 +160,7 @@
             </div>
             <div class="small-img-col">
               <img
-                src="assets/images/cabinet-1.jpg"
+                src="assets/images/<?php echo $row['product_image4']; ?>"
                 width="100%"
                 class="small-img"
                 alt=""
@@ -142,23 +169,24 @@
           </div>
         </div>
 
+        
+
         <div class="col-lg-6 col-md-12 col-sm-12">
           <h6>Bed</h6>
-          <h3 class="py-4">Beds</h3>
-          <h2>&#8369; 33,599</h2>
+          <h3 class="py-4"><?php echo $row['product_name']; ?></h3>
+          <h2>&#8369; <?php echo $row['product_price']; ?></h2>
           <input type="number" value="1" />
           <button class="add">Add to Cart</button>
           <h4 class="mt-5 mb-5">Product Details</h4>
-          <span
-            >Crafted from high-quality solid wood, the bed features a spindle
-            headboard and footboard design that adds a touch of elegance and
-            sophistication to the room. The platform design eliminates the need
-            for a box spring, providing ample support for your mattress while
-            also giving the bed a low profile look.
-          </span>
+          <span><?php echo $row['product_description']; ?></span>
         </div>
+
+        <?php } ?>
+
       </div>
     </div>
+
+    
 
     <!-- Related Products -->
     <section id="related-products" class="my-5 pb-5">

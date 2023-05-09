@@ -134,6 +134,38 @@
       </div>
     </section>
 
+
+    <!-- Featured Products -->
+
+    <section id="featured" class="my-5 pb-5">
+      <div class="container text-center mt-5 py-5">
+        <h3>Featured Products</h3>
+        <hr />
+      </div>
+      <div class="row mx-auto container-fluid">
+
+      <?php include('server/get_featured_products.php'); ?>
+
+      <?php while($row= $featured_products->fetch_assoc()){ ?>
+
+        <div class="product text-center col-lg-3 col-md-4 col-sm-12">
+          <img class="img-fluid mb-3" src="assets/images/<?php echo $row['product_image']; ?>" alt="" />
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+          <h5 class="p-name"><?php echo $row['product_name']; ?></h5>
+          <h4 class="p-price">&#8369;<?php echo $row['product_price']; ?></h4>
+          <a href="<?php echo "single_product.php?product_id=". $row['product_id']; ?>"><button class="add">Buy Now</button></a>
+        </div>
+
+        <?php } ?>
+      </div>
+    </section>
+
     <!-- Latest Products -->
     <div class="latest-products">
       <div class="container">
