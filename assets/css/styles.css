@@ -323,34 +323,22 @@ header .navbar {
   cursor: pointer;
 } */
 button.add {
-  background: transparent;
-  color: black;
-  border: 1px solid black;
+  background: #a27b5c;
+  color: white;
+  border: 1px solid #a27b5c;
   padding: 5px 10px;
   cursor: pointer;
 }
 button.add:hover {
-  animation: shake 0.6s infinite;
-}
-@keyframes shake {
-  0% {
-    transform: translate(0px, 0px) rotate(0deg);
-  }
-  25% {
-    transform: translate(1px, 1px) rotate(1deg);
-  }
-  50% {
-    transform: translate(-1px, -1px) rotate(-1deg);
-  }
-  75% {
-    transform: translate(2px, -1px) rotate(2deg);
-  }
-  100% {
-    transform: translate(-1px, 1px) rotate(-1deg);
-  }
+  background-color: transparent;
+  border: 1px solid black;
+  cursor: pointer;
+  color: black;
+  transform: scale(1);
+  transition: 0.3s;
 }
 
-.shopbtn {
+.shop-btn {
   background-color: #a27b5c;
   font-size: 20px;
   border: 1px solid black;
@@ -358,7 +346,7 @@ button.add:hover {
   color: white;
   padding: 5px 25px;
 }
-.shopbtn:hover {
+.shop-btn:hover {
   background-color: transparent;
   border: 1px solid black;
   cursor: pointer;
