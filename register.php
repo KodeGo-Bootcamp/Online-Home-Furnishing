@@ -50,8 +50,8 @@ session_start();
                       //if account was created successfully
                       if($stmt->execute()) {
                       $_SESSION['user_email'] = $email;
-                      $_SESSIOM['user_name'] = $name;
-                      $_SESSIOM['logged_in'] = true;
+                      $_SESSION['user_name'] = $name;
+                      $_SESSION['logged_in'] = true;
                       header('location: account.php?register=You registered successfully');
 
 
@@ -63,7 +63,7 @@ session_start();
         }
 
       }
-
+// if user has already registered, then the user will be routed to account page
   }else if(isset($_SESSION['logged_in'])){
     header('location: account.php');
     exit;
