@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
     include('server/connection.php');
 
     if(isset($_POST['register'])){
@@ -28,6 +30,7 @@
                         $stmt1->bind_param('s',$email);
                         $stmt1->execute();
                         $stmt1->bind_result($num_rows);
+                        $stmt1->store_result();
                         $stmt1->fetch();
 
 
