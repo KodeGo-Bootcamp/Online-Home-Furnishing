@@ -84,7 +84,7 @@ $_SESSION['cart'][$product_id] = $product_array;
 calculateTotalCart();
 
 }else{
-  header('location: index.php');
+  // header('location: index.php');
 }
 
 function calculateTotalCart(){
@@ -178,7 +178,7 @@ function calculateTotalCart(){
                 <a class="nav-link" href="contact.html">Contact </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link cart" href="#"
+                <a class="nav-link cart-one" href="cart.php"
                   ><i class="fa-solid fa-cart-shopping"></i
                 ></a>
               </li>
@@ -238,7 +238,7 @@ function calculateTotalCart(){
                     <form class="quantity-form" method="POST" action="cart.php">
                       <input type="hidden" name="product_id" value="<?php echo $value['product_id']; ?>">
                       <input type="number" name="product_quantity" value="<?php echo $value['product_quantity']; ?>">
-                      <input type="submit" class="edit-btn" value="edit" name="edit_quantity">
+                      <input type="submit" class="edit-btn" value="update" name="edit_quantity">
                     </form>
                 </td>
                 <td>

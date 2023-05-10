@@ -26,12 +26,24 @@ $stmt->execute();
 
 $order_id = $stmt->insert_id;
 
-echo $order_id;
-
-
 
 
 //ii. get products from the cart / from the session
+foreach($_SESSION['cart'] as $key => $value) {
+    $product = $_SESSION['cart'] [$key];
+    $product_id = $product['product_id'];
+    $product_name = $product['product_name'];
+    $product_image = $product['product_image'];
+    $product_price = $product['product_price'];
+    $product_quantity = $product['product_quantity'];
+
+    $stmt1 = $conn->prepare("INSERT INTO order_items (order_id,product_id,product_name,product_image,user_id,order_date,product_price,product_quantity)
+                VALUES(?,?,?,?,?,?,?,?)");
+
+    $stmt1->bind_param('iissisii',$order_id,$product_id,$product_name,$product_image,$user_id,$order_date,$product_price,$product_quantity);
+
+    $stmt1->execute();
+}
 
 
 

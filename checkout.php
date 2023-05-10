@@ -75,7 +75,7 @@ if( !empty($_SESSION['cart']) && isset($_POST['checkout'])){
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html"
+                <a class="nav-link" href="index.php"
                   >Home
                   <span class="sr-only">(current)</span>
                 </a>
@@ -90,7 +90,7 @@ if( !empty($_SESSION['cart']) && isset($_POST['checkout'])){
                 <a class="nav-link" href="contact.html">Contact </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link cart-one" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a class="nav-link cart-one" href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
               </li>
                <li class="nav-item">
               <a href="login.html" class="nav-link"><i class="fa-solid fa-circle-user"></i></a>

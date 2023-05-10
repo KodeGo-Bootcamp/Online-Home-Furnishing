@@ -81,7 +81,7 @@
                 <a class="nav-link" href="contact.html">Contact </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link cart1" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a class="nav-link cart-one" href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
               </li>
                <li class="nav-item">
               <a href="login.html" class="nav-link"><i class="fa-solid fa-circle-user"></i></a>
