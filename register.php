@@ -60,11 +60,6 @@
         }
 
       }
-  
-
-     }else{
-
-  header('location: register.php?error=At least fill in the form');
 
   }
 
