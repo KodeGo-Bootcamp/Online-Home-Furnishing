@@ -1,3 +1,75 @@
+<?php
+
+    include('server/connection.php');
+
+    if(isset($_POST['register'])){
+
+      $name = $_POST['name'];
+      $email = $_POST['email'];
+      $password = $_POST['password'];
+      $confirmPassword = $_POST['confirmPassword'];
+
+          //if passwords didn't match
+        if($password !== $confirmPassword){
+            header('location: register.php?error=Passwords did not match');
+  
+
+                        //if password is less than 6 characters
+                      }else if(strlen($password) < 6){
+                          header('location: register.php?error=Password must be at least 6 characters');
+                        
+
+
+                        //if there is no error 
+                      }else{
+
+                        //check whether there is a user with this email or not
+                        $stmt1 = $conn->prepare("SELECT * FROM users where user_email=?");
+                        $stmt1->bind_param('s',$email);
+                        $stmt1->execute();
+                        $stmt1->bind_result($num_rows);
+                        $stmt1->fetch();
+
+
+                        //if there is a user already registered with this email
+                      if($num_rows != 0){
+                          header('location: register.php?error=Email address already used');
+
+                        //if no user registered with this email  
+                        }else{
+
+                        //create a new user
+                      $stmt = $conn->prepare("INSERT INTO users (user_name,user_email,user_password)
+                                                      VALUES(?,?,?)");
+
+                      $stmt->bind_param('sss',$name,$email,md5($password));    
+
+                      //if account was created successfully
+                      if($stmt->execute()) {
+                      $_SESSION['user_email'] = $email;
+                      $_SESSIOM['user_name'] = $name;
+                      $_SESSIOM['logged_in'] = true;
+                      header('location: account.php?register=You registered successfully');
+
+
+                      //account couldn't be created
+                      }else{
+                      header('location: register.php?error=Could not create an account at the moment');
+                      }
+
+        }
+
+      }
+  
+
+     }else{
+
+  header('location: register.php?error=At least fill in the form');
+
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,7 +158,8 @@
       <h3 class="form-weight-bold">Register</h3>
     </div>
     <div class="mx-auto container">
-      <form id="register-form">
+      <form id="register-form" method="POST" action="register.php">
+        <p style="color: red;"><?php if(isset($_GET['error'])) { echo $_GET['error'];} ?></p>
         <div class="form-group">
           <label>Name</label>
           <input type="text" class="form-control" id="register-name" name="name" placeholder="Name" required>
@@ -106,7 +179,7 @@
             placeholder="Confirm Password" required>
         </div>
         <div class="form-group">
-          <input type="submit" class="btn" id="register-btn" value="Register">
+          <input type="submit" class="btn" id="register-btn" name="register" value="Register">
         </div>
         <div class="form-group">
           <a href="login.html" id="login-url" class="btn">Login instead</a>
