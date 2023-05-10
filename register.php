@@ -35,7 +35,7 @@ session_start();
                       }else{
 
                         //check whether there is a user with this email or not
-                        $stmt1 = $conn->prepare("SELECT count(*) FROM users where user_email=?");
+                        $stmt1 = $conn->prepare("SELECT count(*) FROM users where user_email = ?");
                         $stmt1->bind_param('s',$email);
                         $stmt1->execute();
                         $stmt1->bind_result($num_rows);
@@ -149,7 +149,7 @@ session_start();
               <a class="nav-link cart-one" href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
             </li>
             <li class="nav-item">
-              <a href="login.html" class="nav-link"><i class="fa-solid fa-circle-user"></i></a>
+              <a href="login.php" class="nav-link"><i class="fa-solid fa-circle-user"></i></a>
             </li>
           </ul>
         </div>
@@ -188,7 +188,7 @@ session_start();
           <input type="submit" class="btn" id="register-btn" name="register" value="Register">
         </div>
         <div class="form-group">
-          <a href="login.html" id="login-url" class="btn">Login instead</a>
+          <a href="login.php" id="login-url" class="btn">Login instead</a>
         </div>
       </form>
     </div>

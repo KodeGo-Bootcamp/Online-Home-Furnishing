@@ -2,19 +2,22 @@
 
 session_start();
 
-if(isset($_SESSION['logged_in'])) {
+if(!isset($_SESSION['logged_in'])){
 header('location: login.php');
 exit;
 }
 
 
-
-
+  if(isset($_GET['logout'])){
+    if(isset($_SESSION['logged_in'])) {
+      unset($_SESSION['logged_in']);
+      unset($_SESSION['user_email']);
+      unset($_SESSION['user_name']);
+      header('location: login.php');
+      exit;
+    }
+}
 ?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -57,7 +60,7 @@ exit;
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           <a class="navbar-brand" href="index.html"
-            ><h2>Home<em>Furnishing</em></h2></a
+            ><h2>Home<em> Furnishing</em></h2></a
           >
           <button
             class="navbar-toggler"
@@ -119,10 +122,10 @@ exit;
         <h3 class="font-weight-bold">Account Info</h3>
         <hr class="mx-auto" />
         <div class="account-info">
-          <p>Name <span><?php if(isset($_SESSION['user_name'])) { echo $_SESSION['user_name'];} ?></span></p>
-          <p>Email <span><?php if(isset($_SESSION['user_email'])) { echo $_SESSION['user_email'];} ?></span></p>
-          <p><a href="" id="orders-btn">Your Orders</a></p>
-          <p><a href="" id="logout-btn">Logout</a></p>
+          <p>Name: <span><?php if(isset($_SESSION['user_name'])) { echo $_SESSION['user_name'];} ?></span></p>
+          <p>Email: <span><?php if(isset($_SESSION['user_email'])) { echo $_SESSION['user_email'];} ?></span></p>
+          <p><a href="#orders" id="orders-btn">Your Orders</a></p>
+          <p><a href="account.php?logout=1" id="logout-btn">Logout</a></p>
         </div>
       </div>
 
@@ -163,6 +166,40 @@ exit;
         </form>
       </div>
     </div>
+
+
+    <!-- Orders -->
+    <div id="orders" class="orders container my-5 py-3">
+      <div class="container mt-2">
+        <h2 class="font-weight-bold text-center">Your Orders</h2>
+        <hr class="mx-auto">
+      </div>
+
+      <table class="mt-5 pt-5">
+        <tr>
+          <th>Product</th>
+          <th>Date</th>
+        </tr>
+        <tr>
+          <td>
+            <div class="product-info">
+              <img src="assets/images/bed-1.jpg" alt="">
+              <div>
+                <p class="mt-3">Bed</p>
+              </div>
+            </div>
+          </td>
+          <td>
+            <span>2023-05-8</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+
+
+
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

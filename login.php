@@ -14,16 +14,16 @@ if(isset($_SESSION['logged_in'])){
     $email =  $_POST['email'];
     $password =  md5($_POST['password']);
 
-    $stmt = $conn->prepare("SELECT user_id,user_email,user_name,user_password FROM users WHERE user_email = ? AND user_password = ? LIMIT 1");
+    $stmt = $conn->prepare("SELECT user_id,user_name, user_password, user_email FROM users WHERE user_email = ? AND user_password = ? LIMIT 1");
 
-    $stmt->bind_param('ss', $email,$password);
+    $stmt->bind_param('ss',$email,$password);
 
-    if($stmt->execute()) {
-      $stmt->bind_result($user_id,$user_name,$user_email,$user_password);
+    if($stmt->execute()){
+      $stmt->bind_result($user_id,$user_name,$user_password,$user_email);
       $stmt->store_result();
 
       if($stmt->num_rows() == 1){
-      $stmt->fetch_result();
+      $stmt->fetch();
 
       $_SESSION['user_id'] = $user_id;
       $_SESSION['user_name'] = $user_name;
@@ -42,13 +42,7 @@ if(isset($_SESSION['logged_in'])){
     }
 
   }
-
 ?>
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -171,7 +165,7 @@ if(isset($_SESSION['logged_in'])){
             type="text"
             class="form-control"
             id="login-password"
-            name="Password"
+            name="password"
             placeholder="Password"
             required
           />
