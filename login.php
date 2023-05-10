@@ -1,3 +1,49 @@
+<?php
+
+session_start();
+
+include('server/connection.php');
+
+  if(isset($_POST['login_btn'])){
+
+    $email =  $_POST['email'];
+    $email =  md5($_POST['password']);
+
+    $stmt = $conn->prepare("SELECT user_id,user_email,user_name,user_password FROM users WHERE user_email = ? AND user_password = ? LIMIT 1");
+
+    $stmt->bind_param('ss', $email,$password);
+
+    if($stmt->execute()) {
+      $stmt->bind_result($user_id,$user_name,$user_email,$user_password);
+      $stmt->store_result();
+
+      if($stmt->num_rows() == 1){
+      $stmt->fetch_result();
+
+      $_SESSION['user_id'] = $user_id;
+      $_SESSION['user_name'] = $user_name;
+      $_SESSION['user_email'] = $user_email;
+      $_SESSION['logged_in'] = true;
+
+      header('location: account.php?message=Logged in successfully');
+
+    }else{
+      header('location: login.php?error=Could not verify your account');
+    }
+
+    }else{
+        //error
+        header('location: login.php?error=Something went wrong');
+    }
+
+  }
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -101,6 +147,7 @@
       <h3 class="form-weight-bold">Login</h3>
     </div>
     <div class="mx-auto container">
+      <p style="color: red;" class="text-center"><?php if(isset($_GET['error'])) {echo $_GET['error']; }?></p>
       <form id="login-form" method="POST" action="login.php">
         <div class="form-group">
           <label>Email</label>
@@ -128,7 +175,7 @@
           <input type="submit" class="btn" id="login-btn" name="login_btn" value="Login" />
         </div>
         <div class="form-group">
-          <a href="register.html" id="register-url" class="btn">Sign Up</a>
+          <a href="register.php" id="register-url" class="btn">Sign Up</a>
         </div>
       </form>
     </div>
