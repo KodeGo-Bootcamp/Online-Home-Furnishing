@@ -24,11 +24,13 @@ $stmt->bind_param('isiisss',$order_cost,$order_status,$user_id,$phone,$city,$add
 
 $stmt->execute();
 
+//ii. issue new order and store the order information in the database
+
 $order_id = $stmt->insert_id;
 
 
 
-//ii. get products from the cart / from the session
+//iii. get products from the cart / from the session
 foreach($_SESSION['cart'] as $key => $value) {
     $product = $_SESSION['cart'] [$key];
     $product_id = $product['product_id'];
@@ -36,6 +38,9 @@ foreach($_SESSION['cart'] as $key => $value) {
     $product_image = $product['product_image'];
     $product_price = $product['product_price'];
     $product_quantity = $product['product_quantity'];
+
+
+//iv. store each single item in order_items database
 
     $stmt1 = $conn->prepare("INSERT INTO order_items (order_id,product_id,product_name,product_image,user_id,order_date,product_price,product_quantity)
                 VALUES(?,?,?,?,?,?,?,?)");
@@ -46,21 +51,13 @@ foreach($_SESSION['cart'] as $key => $value) {
 }
 
 
-
-//iii. issue new order nd store the order information in the database
-
-
-
-//iv. store each single item in order_items database
-
-
-
-//v. remove everything from the cart
+//v. remove everything from the cart - delay until payment is done.
+// unset($_SESSION['cart']);
 
 
 
 //vi. inform the customer whether there's a problem or none. 
-
+header('location: ../payment.php?order_status=TOTAL AMOUNT TO PAY');
 
 }
 
