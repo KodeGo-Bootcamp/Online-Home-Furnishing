@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+include('server/connection.php');
 
 if(!isset($_SESSION['logged_in'])){
 header('location: login.php');
@@ -16,6 +17,37 @@ exit;
       header('location: login.php');
       exit;
     }
+}
+
+              if(isset($_POST['change_password'])){
+
+                $password = $_POST['password'];
+                $confirmPassword = $_POST['confirmPassword'];
+                $user_email = $_SESSION['user_email'];
+
+                //if passwords didn't match
+                if($password !== $confirmPassword){
+                  header('location: account.php?error=Passwords did not match');
+
+
+                //if password is less than 6 characters
+              }else if(strlen($password) < 6){
+                  header('location: account.php?error=Password must be at least 6 characters');
+              
+
+                  //no errors
+                }else{
+                  $stmt = $conn->prepare("UPDATE users SET user_password=? WHERE user_email=?");
+                  $stmt->bind_param('ss',md5($password),$user_email);
+
+                  if($stmt->execute()){
+                    header('location: account.php?message=Password has been updated successfully');
+                  }else{
+                    header('location: account.php?error=Could not update password');
+                  }
+
+                }
+
 }
 ?>
 <!DOCTYPE html>
@@ -131,6 +163,8 @@ exit;
 
       <div class="col-lg-6 col-md-12 col-sm-12">
         <form id="account-form" method="POST" action="action.php">
+        <p class="text-center" style="color: red;"><?php if(isset($_GET['error'])) { echo $_GET['error'];} ?></p>
+        <p class="text-center" style="color: green;"><?php if(isset($_GET['message'])) { echo $_GET['message'];} ?></p>
           <h3>Change Password</h3>
           <hr class="mx-auto" />
           <div class="form-group">
@@ -158,7 +192,8 @@ exit;
           <div class="form-group">
             <input
               type="submit"
-              value="Change Password" name="change_password"
+              value="Change Password" 
+              name="change_password"
               class="btn"
               id="change-pass-btn"
             />
