@@ -1,9 +1,5 @@
 <?php
-
 session_start();
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -81,7 +77,7 @@ session_start();
                 <a class="nav-link cart-one" href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
               </li>
                <li class="nav-item">
-              <a href="login.html" class="nav-link"><i class="fa-solid fa-circle-user"></i></a>
+              <a href="account.php" class="nav-link"><i class="fa-solid fa-circle-user"></i></a>
               </li>
             </ul>
           </div>

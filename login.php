@@ -4,6 +4,11 @@ session_start();
 
 include('server/connection.php');
 
+if(isset($_SESSION['logged_in'])){
+  header('location: account.php');
+  exit;
+}
+
   if(isset($_POST['login_btn'])){
 
     $email =  $_POST['email'];
@@ -122,7 +127,7 @@ include('server/connection.php');
                 ></a>
               </li>
               <li class="nav-item">
-                <a href="login.html" class="nav-link"
+                <a href="login.php" class="nav-link"
                   ><i class="fa-solid fa-circle-user"></i
                 ></a>
               </li>
