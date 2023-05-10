@@ -11,6 +11,8 @@ if(isset($_POST['add_to_cart'])){
   //if product has been added to the cart or not
   if(!in_array($_POST['product_id'], $products_array_ids)){
 
+    $product_id = $_POST['product_id'];
+
   $product_array = array(
     'product_id' => $_POST['product_id'],
     'product_name' => $_POST['product_name'],
@@ -19,7 +21,7 @@ if(isset($_POST['add_to_cart'])){
     'product_quantity' => $_POST['product_quantity']
   );
   
-$_SESSION['cart'] ['product_id'] = $product_array;
+$_SESSION['cart'] [$product_id] = $product_array;
 
     //if the product has been added already
   }else{
@@ -49,8 +51,54 @@ $_SESSION['cart'] [$product_id] = $product_array;
 
  }
 
+ //calculate total cart
+ calculateTotalCart();
+
+ //remove the product from the cart
+}else if(isset($_POST['remove_product'])){
+
+  $product_id = $_POST['product_id'];
+  unset($_SESSION['cart'][$product_id]);
+
+//calculate total
+calculateTotalCart();
+
+
+
+}else if(isset($_POST['edit_quantity'])){
+
+  //we get ID nd quantity from the form
+  $product_id = $_POST['product_id'];
+$product_quantity =  $_POST['product_quantity'];
+
+//get the product rray from the session
+$product_array = $_SESSION['cart'][$product_id];
+
+//update product quantity
+$product_array['product_quantity'] = $product_quantity;
+
+//return array back to its place
+$_SESSION['cart'][$product_id] = $product_array;
+
+//calculate total
+calculateTotalCart();
+
 }else{
   header('location: index.php');
+}
+
+function calculateTotalCart(){
+
+  $total = 0;
+
+   foreach($_SESSION['cart'] as $key => $value) {
+      $product = $_SESSION['cart'][$key];
+    $price = $product['product_price'];
+    $quantity = $product['product_quantity'];
+    $total = $total + $price * $quantity;
+   }
+
+   $_SESSION['total'] =  $total;
 }
 
 
@@ -115,7 +163,7 @@ $_SESSION['cart'] [$product_id] = $product_array;
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html"
+                <a class="nav-link" href="index.php"
                   >Home
                   <span class="sr-only">(current)</span>
                 </a>
@@ -178,17 +226,24 @@ $_SESSION['cart'] [$product_id] = $product_array;
                             <p><?php echo $value['product_name']; ?></p>
                             <small><span>&#8369;</span><?php echo $value['product_price']; ?></small>
                             <br>
-                            <a class="remove-btn" href="">Remove</a>
+                            <form method="POST" action="cart.php">
+                              <input type="hidden" name="product_id" value="<?php echo $value['product_id']; ?>">
+                            <input type="submit" name="remove_product" class="remove-btn" value="remove">
+                            </form>
                         </div>
                     </div>
                 </td>
                 <td>
-                    <input type="number" value="<?php echo $value['product_quantity']; ?>">
-                    <a class="edit-btn" href="">Edit</a>
+                    
+                    <form class="quantity-form" method="POST" action="cart.php">
+                      <input type="hidden" name="product_id" value="<?php echo $value['product_id']; ?>">
+                      <input type="number" name="product_quantity" value="<?php echo $value['product_quantity']; ?>">
+                      <input type="submit" class="edit-btn" value="edit" name="edit_quantity">
+                    </form>
                 </td>
                 <td>
                     <span>&#8369;</span>
-                    <span class="product-price">12, 299</span>
+                    <span class="product-price"><?php echo $value['product_quantity'] * $value['product_price']; ?></span>
                 </td>
             </tr>
 
@@ -197,20 +252,23 @@ $_SESSION['cart'] [$product_id] = $product_array;
         </table>
         <div class="cart-total">
         <table>
-            <tr>
+            <!-- <tr>
                 <td>Subtotal</td>
                 <td>&#8369; 12, 299</td>
-            </tr>
+            </tr> -->
             <tr>
                 <td>Total </td>
-                <td>&#8369; 12, 299</td>
+                <td>&#8369; <?php echo $_SESSION['total']; ?> </td>
             </tr>
 
         </table>
     </div>
 
     <div class="checkout-container">
-        <button class="btn checkout-btn">Checkout</button>
+      <form action="checkout.php" method="POST">
+      <input class="btn checkout-btn" type="submit" value="Checkout" name="checkout"></input>
+      </form>
+        
     </div>
     </section>
 

@@ -1351,6 +1351,28 @@ footer .inner-content p a {
 }
 
 /* Cart styling */
+.quantity-form input {
+  width: 60px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.cart .remove-btn {
+  color: #a27b5c;
+  text-decoration: none;
+  font-size: 14px;
+  background-color: white;
+  border: none;
+}
+
+.cart .edit-btn {
+  color: #a27b5c;
+  text-decoration: none;
+  font-size: 14px;
+  background-color: white;
+  border: none;
+}
 
 .cart table {
   width: 100%;
