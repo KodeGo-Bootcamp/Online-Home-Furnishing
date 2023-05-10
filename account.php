@@ -130,7 +130,7 @@ exit;
       </div>
 
       <div class="col-lg-6 col-md-12 col-sm-12">
-        <form id="account-form">
+        <form id="account-form" method="POST" action="action.php">
           <h3>Change Password</h3>
           <hr class="mx-auto" />
           <div class="form-group">
@@ -150,7 +150,7 @@ exit;
               type="password"
               class="form-control"
               id="account-password-confirm"
-              name="confirm-password"
+              name="confirmPassword"
               placeholder="Password"
               required
             />
@@ -158,7 +158,7 @@ exit;
           <div class="form-group">
             <input
               type="submit"
-              value="Change Password"
+              value="Change Password" name="change_password"
               class="btn"
               id="change-pass-btn"
             />
