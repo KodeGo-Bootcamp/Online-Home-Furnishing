@@ -7,7 +7,7 @@ include('server/connection.php');
   if(isset($_POST['login_btn'])){
 
     $email =  $_POST['email'];
-    $email =  md5($_POST['password']);
+    $password =  md5($_POST['password']);
 
     $stmt = $conn->prepare("SELECT user_id,user_email,user_name,user_password FROM users WHERE user_email = ? AND user_password = ? LIMIT 1");
 
