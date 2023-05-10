@@ -1,3 +1,61 @@
+<?php 
+
+session_start();
+
+if(isset($_POST['add_to_cart'])){
+
+  //if the customer has already added a product to the cart
+ if(isset($_SESSION['cart'])){
+
+  $products_array_ids = array_column($_SESSION['cart'], "product_id");
+  //if product has been added to the cart or not
+  if( !in_array($_POST['product_id'], $products_array_ids) ){
+
+  $product_array = array(
+    'product_id' => $_POST['product_id'],
+    'product_name' => $_POST['product_name'],
+    'product_price' => $_POST['product_price'],
+    'product_image' => $_POST['product_image'],
+    'product_quantity' => $_POST['product_quantity']
+  );
+  
+$_SESSION['cart'] [$product_id] = $product_array;
+
+    //if the product has been added already
+  }else{
+echo '<script>alert("The product selected was already added to the cart");</script>';
+echo '<script>window.location="index.php";</script>';
+  }
+
+  //if this is the 1st product
+ }else{
+
+  $product_id = $_POST['product_id'];
+  $product_name = $_POST['product_name'];
+  $product_price = $_POST['product_price'];
+  $product_image = $_POST['product_image'];
+  $product_quantity = $_POST['product_quantity'];
+
+  $product_array = array(
+    'product_id' => $product_id,
+    'product_name' => $product_name,
+    'product_price' => $product_price,
+    'product_image' => $product_image,
+    'product_quantity' => $product_quantity
+  );
+
+$_SESSION['cart'] [$product_id] = $product_array;
+
+
+ }
+
+}else{
+  header('location: index.php');
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -130,48 +188,7 @@
                     <span class="product-price">12, 299</span>
                 </td>
             </tr>
-            <tr>
-                <td>
-                    <div class="product-info">
-                        <img src="assets/images/cabinet-1.jpg" alt="">
-                        <div>
-                            <p>Cabinet</p>
-                            <small><span>&#8369;</span>12, 299</small>
-                            <br>
-                            <a class="remove-btn" href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <input type="number" value="1">
-                    <a class="edit-btn" href="">Edit</a>
-                </td>
-                <td>
-                    <span>&#8369;</span>
-                    <span class="product-price">12, 299</span>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="product-info">
-                        <img src="assets/images/cabinet-1.jpg" alt="">
-                        <div>
-                            <p>Cabinet</p>
-                            <small><span>&#8369;</span>12, 299</small>
-                            <br>
-                            <a class="remove-btn" href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td>
-                    <input type="number" value="1">
-                    <a class="edit-btn" href="">Edit</a>
-                </td>
-                <td>
-                    <span>&#8369;</span>
-                    <span class="product-price">12, 299</span>
-                </td>
-            </tr>
+
         </table>
         <div class="cart-total">
         <table>
