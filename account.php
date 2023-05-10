@@ -152,7 +152,8 @@ exit;
     <div class="row container mx-auto">
       <div class="text-center mt-3 pt-5 col-lg-6 col-md-12 col-sm-12">
         <h3 class="font-weight-bold">Account Info</h3>
-        <br>
+        <p class="text-center" style="color: green;"><?php if(isset($_GET['register_success'])) { echo $_GET['register_success'];} ?></p>
+      <p class="text-center" style="color: green;"><?php if(isset($_GET['login_success'])) { echo $_GET['login_success'];} ?></p>
         <br>
         <div class="account-info">
           <p>Name: <span><?php if(isset($_SESSION['user_name'])) { echo $_SESSION['user_name'];} ?></span></p>
