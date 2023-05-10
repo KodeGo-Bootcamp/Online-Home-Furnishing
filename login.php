@@ -101,7 +101,7 @@
       <h3 class="form-weight-bold">Login</h3>
     </div>
     <div class="mx-auto container">
-      <form id="login-form">
+      <form id="login-form" method="POST" action="login.php">
         <div class="form-group">
           <label>Email</label>
           <input
@@ -125,7 +125,7 @@
           />
         </div>
         <div class="form-group">
-          <input type="submit" class="btn" id="login-btn" value="Login" />
+          <input type="submit" class="btn" id="login-btn" name="login_btn" value="Login" />
         </div>
         <div class="form-group">
           <a href="register.html" id="register-url" class="btn">Sign Up</a>
