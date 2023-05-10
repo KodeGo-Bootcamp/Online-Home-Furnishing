@@ -26,7 +26,7 @@ session_start();
                       }else{
 
                         //check whether there is a user with this email or not
-                        $stmt1 = $conn->prepare("SELECT * FROM users where user_email=?");
+                        $stmt1 = $conn->prepare("SELECT count(*) FROM users where user_email=?");
                         $stmt1->bind_param('s',$email);
                         $stmt1->execute();
                         $stmt1->bind_result($num_rows);
