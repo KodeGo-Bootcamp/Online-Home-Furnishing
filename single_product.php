@@ -96,7 +96,7 @@ if(isset($_GET['product_id'])){
                 <a class="nav-link" href="contact.html">Contact </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link cart" href="#"
+                <a class="nav-link cart-one" href="#"
                   ><i class="fa-solid fa-cart-shopping"></i
                 ></a>
               </li>
@@ -173,12 +173,14 @@ if(isset($_GET['product_id'])){
 
         <div class="col-lg-6 col-md-12 col-sm-12">
           <h3 class="py-4"><?php echo $row['product_name']; ?></h3>
-          <h2>&#8369; <?php echo $row['product_price']; ?></h2>
+          <h2>&#8369;<?php echo $row['product_price']; ?></h2>
 
           <form method="POST" action="cart.php">
+          <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
           <input type="hidden" name="product_image" value="<?php echo $row['product_image']; ?>">
           <input type="hidden" name="product_name" value="<?php echo $row['product_name']; ?>">
           <input type="hidden" name="product_price" value="<?php echo $row['product_price']; ?>">
+
           <input type="number" name="product_quantity" value="1" />
           <button class="add" type="submit" name="add_to_cart">Add to Cart</button>
           </form>
