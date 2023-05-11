@@ -511,6 +511,17 @@ button.add:hover {
   font-weight: 500;
 }
 
+/* Pagination */
+.pagination a {
+  color: #a27b5c;
+}
+
+.pagination li:hover a {
+  color: white;
+  background-color: #a27b5c;
+  font-weight: bold;
+}
+
 /* Best Features */
 
 .about-features {

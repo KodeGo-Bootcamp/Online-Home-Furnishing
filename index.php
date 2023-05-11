@@ -50,7 +50,7 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"
+          <a class="navbar-brand" href="index.php"
             ><h2>Home<em> Furnishing</em></h2></a>
           <button
             class="navbar-toggler"
@@ -72,7 +72,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="products.html">Products</a>
+                <a class="nav-link" href="products.php">Products</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>

@@ -1,3 +1,14 @@
+<?php 
+
+include('server/connection.php');
+$stmt = $conn->prepare("SELECT * FROM products");
+$stmt->execute();
+
+$products = $stmt->get_result();
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,7 +61,7 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="index.php">
             <h2>Home <em>Furnishing</em></h2>
           </a>
           <button
@@ -73,7 +84,7 @@
                 </a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="products.html">Products</a>
+                <a class="nav-link" href="products.php">Products</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
@@ -118,10 +129,10 @@
             <div class="filters">
               <ul>
                 <li class="active" data-filter="*">All Products</li>
-                <li data-filter=".tab">Tables</li>
+                <li data-filter=".table">Tables</li>
                 <li data-filter=".bed">Bed</li>
-                <li data-filter=".cab">Cabinets</li>
-                <li data-filter=".sof">Sofa</li>
+                <li data-filter=".cabinet">Cabinets</li>
+                <li data-filter=".sofa">Sofa</li>
               </ul>
             </div>
           </div>
@@ -213,29 +224,26 @@
             </form>
           </section> -->
 
-          <!-- Tables -->
-          <div class="col-md-12">
+
+
+
+          <!-- PRODUCTS -->
+          <div class="mx-auto container col-md-12">
             <div class="filters-content">
               <div class="row grid">
-                <div class="col-lg-4 col-md-4 all tab">
+
+      <?php while($row = $products->fetch_assoc()) {?>
+                <div class="col-lg-4 col-md-4">
                   <div class="product-item">
                     <img
                       class="prod-img"
-                      src="assets/images/table-1.jpg"
-                      alt=""
-                    />
+                      src="assets/images/<?php echo $row['product_image']; ?>"/>
                     <div class="down-content">
                       <a href="#">
-                        <h4>Round Dining Table</h4>
+                        <h4><?php echo $row['product_name']; ?></h4>
                       </a>
-                      <h6>&#8369;21,865</h6>
-                      <p>
-                        The table features a round top crafted from high-quality
-                        weathered oak finish, while the base is made of metal
-                        with a unique wrap-around design that adds a touch of
-                        industrial style. Measuring 48 inches in diameter, this
-                        table comfortably seats up to four people.
-                      </p>
+                      <h6>&#8369;<?php echo $row['product_price']; ?></h6>
+                      <p><?php echo $row['product_description']; ?></p>
                       <ul class="stars">
                         <li><i class="fa fa-star"></i></li>
                         <li><i class="fa fa-star"></i></li>
@@ -244,12 +252,15 @@
                         <li><i class="fa fa-star"></i></li>
                       </ul>
                       <button class="add">
-                        <i class="fa fa-shopping-cart"></i>
+                       <a href="<?php echo "single_product.php?product_id=".$row['product_id']; ?>"> Add to Cart <i class="fa fa-shopping-cart"></i></a>
                       </button>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 col-md-4 all tab">
+    <?php } ?>         
+
+
+                <!-- <div class="col-lg-4 col-md-4 all tab">
                   <div class="product-item">
                     <img
                       class="prod-img"
@@ -315,9 +326,9 @@
                   </div>
                 </div>
 
-                <!-- Beds -->
+                 Beds -->
 
-                <div class="col-lg-4 col-md-4 all bed">
+                <!-- <div class="col-lg-4 col-md-4 all bed">
                   <div class="product-item">
                     <img
                       class="prod-img"
@@ -416,12 +427,14 @@
                     </div>
                   </div>
                 </div>
+
+
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- Sofa -->
-          <div class="col-md-12">
+          <!-- <div class="col-md-12">
             <div class="filters-content">
               <div class="row grid">
                 <div class="col-lg-4 col-md-4 all sof">
@@ -522,11 +535,11 @@
                       </button>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
                 <!-- Cabinet -->
 
-                <div class="col-lg-4 col-md-4 all cab">
+                <!-- <div class="col-lg-4 col-md-4 all cab">
                   <div class="product-item">
                     <img
                       class="prod-img"
@@ -628,7 +641,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <!-- <div class="col-md-12">
             <ul class="pages">
@@ -636,12 +649,13 @@
                 <a href="#"><i class="fa fa-angle-double-right"></i></a>
               </li>
             </ul>
-          </div> -->
+          </div> --> 
         </div>
       </div>
     </div>
+    
 
-    <footer>
+    <!-- <footer>
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -659,7 +673,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
     <!-- Back to top -->
 
