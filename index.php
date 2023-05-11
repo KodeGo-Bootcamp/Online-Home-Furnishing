@@ -173,24 +173,22 @@
           <div class="col-md-12">
             <div class="section-heading">
               <h2>Latest Products</h2>
-              <a href="products.html"
+              <a href="products.php"
                 >view all products <i class="fa fa-angle-right"></i
               ></a>
             </div>
           </div>
+
+          <?php include('server/get_latest_products.php'); ?>
+
+          <?php while($row= $latest_products->fetch_assoc()){ ?>
           <div class="col-md-4">
             <div class="product-item">
-              <img class="prod-img" src="assets/images/table-1.jpg" alt="" />
+              <img class="prod-img" src="assets/images/<?php echo $row['product_image']; ?>" alt="" />
               <div class="down-content">
-                <h4>Round Dining Table</h4>
-                <h6>&#8369;21,865</h6>
-                <p>
-                  The table features a round top crafted from high-quality
-                  weathered oak finish, while the base is made of metal with a
-                  unique wrap-around design that adds a touch of industrial
-                  style. Measuring 48 inches in diameter, this table comfortably
-                  seats up to four people.
-                </p>
+                <h4><?php echo $row['product_name']; ?></h4>
+                <h6>&#8369;<?php echo $row['product_price']; ?></h6>
+                <p><?php echo $row['product_description']; ?></p>
                 <ul class="stars">
                   <li><i class="fa fa-star"></i></li>
                   <li><i class="fa fa-star"></i></li>
@@ -198,11 +196,12 @@
                   <li><i class="fa fa-star"></i></li>
                   <li><i class="fa fa-star"></i></li>
                 </ul>
-                <button class="add"><i class="fa fa-shopping-cart"></i></button>
+                <button class="add">Add to Cart <i class="fa fa-shopping-cart"></i></button>
               </div>
             </div>
           </div>
-          <div class="col-md-4">
+          <?php } ?>
+          <!-- <div class="col-md-4">
             <div class="product-item">
             <img class="prod-img" src="assets/images/table-2.jpg" alt="" />
               <div class="down-content">
@@ -325,9 +324,10 @@
                 <button class="add"><i class="fa fa-shopping-cart"></i></button>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
+      
     </div>
 
         <!-- Pagination -->
