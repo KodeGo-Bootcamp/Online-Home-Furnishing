@@ -1430,3 +1430,41 @@ th:last-child {
   display: flex;
   justify-content: flex-end;
 }
+
+/* Orders Styling */
+
+.orders table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.orders .product-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.orders th {
+  padding: 5px 20px;
+  color: white;
+  background-color: #a27b5c;
+  /* text-align: left; */
+}
+
+.orders th:nth-child(2) {
+  /* text-align: right; */
+}
+
+.orders td {
+  padding: 10px 20px;
+}
+
+.orders td img {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.orders .order-details-btn {
+  color: white;
+  background-color: #a27b5c;
+}
