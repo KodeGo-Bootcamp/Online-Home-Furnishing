@@ -12,7 +12,7 @@
             <h4>Transform Your Home with Home Furnishing</h4>
             <h2>Latest Trends in Furniture and Decor</h2>
             <br>
-            <a href="products.html" class="shop-btn">Shop Now</a>
+            <a href="products.php" class="shop-btn">Shop Now</a>
           </div>
         </div>
         <div class="banner-item-02">
@@ -20,7 +20,7 @@
             <h4>Discover the Best Deals on Home Furnishings</h4>
             <h2>Upgrade Your Living Space Today!</h2>
             <br>
-            <a href="products.html" class="shop-btn">Shop Now</a>
+            <a href="products.php" class="shop-btn">Shop Now</a>
           </div>
         </div>
         <div class="banner-item-03">
@@ -28,7 +28,7 @@
             <h4>Get Ready to Fall in Love with Your Home</h4>
             <h2>Wide Selection of Quality Furniture</h2>
             <br>
-            <a href="products.html" class="shop-btn">Shop Now</a>
+            <a href="products.php" class="shop-btn">Shop Now</a>
           </div>
         </div>
       </div>
