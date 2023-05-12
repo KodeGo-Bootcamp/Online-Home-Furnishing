@@ -2,7 +2,7 @@
 
 session_start();
 
-if( !empty($_SESSION['cart']) && isset($_POST['checkout'])){
+if( !empty($_SESSION['cart'])){
 
   //let user IN
 
@@ -50,6 +50,12 @@ if( !empty($_SESSION['cart']) && isset($_POST['checkout'])){
         <p>Total Amount: &#8369; <?php echo $_SESSION['total']; ?></p>
         <input type="submit" class="btn" id="checkout-btn" name="place_order" value="Place Order">
       </div>
+      <p class="text-center" style="color: red;"><?php if(isset($_GET['message'])) { echo $_GET['message']; } ?>
+      <?php if(isset($_GET['message'])) { ?>
+
+        <a class="" href="login.php"></a>
+    <?php } ?>
+    </p>
     </form>
   </div>
 

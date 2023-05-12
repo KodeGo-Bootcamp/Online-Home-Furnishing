@@ -4,6 +4,17 @@ session_start();
 
 include('connection.php');
 
+
+//if user is not logged in
+if(!isset($_SESSION['logged_in'])) {
+    header('location: ../checkout.php?message=Please login/Register to place an order');
+    exit;
+
+
+    //if user is logged
+}else{
+
+
 if(isset($_POST['place_order'])  ){
 
 //i. get user info and store it in database
@@ -22,8 +33,12 @@ $stmt = $conn->prepare("INSERT INTO orders (order_cost,order_status,user_id,user
                 
 $stmt->bind_param('isiisss',$order_cost,$order_status,$user_id,$phone,$city,$address,$order_date);
 
-$stmt->execute();
+$stmt_status = $stmt->execute();
 
+if(!$stmt_status){
+    header('location: index.php');
+    exit;
+}
 //ii. issue new order and store the order information in the database
 
 $order_id = $stmt->insert_id;
@@ -58,6 +73,8 @@ foreach($_SESSION['cart'] as $key => $value) {
 
 //vi. inform the customer whether there's a problem or none. 
 header('location: ../payment.php?order_status=TOTAL AMOUNT TO PAY');
+
+}
 
 }
 

@@ -16,7 +16,7 @@ session_start();
     <input class="btn btn-primary" value="Pay Now"type="submit">
     <?php } ?>
 
-    <?php if(isset($_GET['order_status']) && $GET['order_status']== "NOT PAID"){ ?>
+    <?php if(isset($_GET['order_status']) && $_GET['order_status']== "NOT PAID"); { ?>
     <input class="btn btn-primary" value="Pay Now"type="submit">
     <?php } ?>
 
