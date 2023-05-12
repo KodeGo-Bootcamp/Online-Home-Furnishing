@@ -1,11 +1,10 @@
 <?php 
 
 include('server/connection.php');
+
 $stmt = $conn->prepare("SELECT * FROM products");
 $stmt->execute();
-
 $products = $stmt->get_result();
-
 
 ?>
 
@@ -144,9 +143,10 @@ $products = $stmt->get_result();
               <hr />
             </div>
 
-            <form>
+            <form action="products.php" method="POST">
               <div class="row mx-auto container">
                 <div class="col-lg-12 col-md-12 col-sm-12">
+
                   <p>Category</p>
                   <div class="form-check">
                     <input
@@ -154,6 +154,8 @@ $products = $stmt->get_result();
                       type="radio"
                       name="category"
                       id="category_one"
+                      value="Table"
+                      type="submit" name="search"
                     />
                     <label class="form-check-label" for="flexRadioDefault1">
                       Table
@@ -166,6 +168,8 @@ $products = $stmt->get_result();
                       type="radio"
                       name="category"
                       id="category_two"
+                      value="Bed"
+                      type="submit" name="search"
                       checked
                     />
                     <label class="form-check-label" for="flexRadioDefault2">
@@ -179,6 +183,8 @@ $products = $stmt->get_result();
                       type="radio"
                       name="category"
                       id="category_two"
+                      value="Sofa"
+                      type="submit" name="search"
                       checked
                     />
                     <label class="form-check-label" for="flexRadioDefault2">
@@ -192,6 +198,8 @@ $products = $stmt->get_result();
                       type="radio"
                       name="category"
                       id="category_two"
+                      value="Cabinet"
+                      type="submit" name="search"
                       checked
                     />
                     <label class="form-check-label" for="flexRadioDefault2">
@@ -200,29 +208,13 @@ $products = $stmt->get_result();
                   </div>
                 </div>
               </div>
-
-              <div class="row mx-auto container mt-5">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                  <p>Price</p>
-                  <input
-                    type="range"
-                    class="form-range w-50"
-                    min="1"
-                    max="100000"
-                    id="customeRange2"
-                  />
-                  <div class="w-50">
-                    <span style="float: left">1</span>
-                    <span style="float: right">100000</span>
-                  </div>
-                </div>
-              </div>
-
               <div class="form-group my-3 mx-3">
                 <input type="submit" name="search" class="btn btn-primary" />
               </div>
             </form>
           </section> -->
+
+
 
 
 
@@ -233,7 +225,7 @@ $products = $stmt->get_result();
               <div class="row grid">
 
       <?php while($row = $products->fetch_assoc()) {?>
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-4 col-md-4 all">
                   <div class="product-item">
                     <img
                       class="prod-img"
@@ -244,16 +236,15 @@ $products = $stmt->get_result();
                       </a>
                       <h6>&#8369;<?php echo $row['product_price']; ?></h6>
                       <p><?php echo $row['product_description']; ?></p>
-                      <ul class="stars">
+                      <ul class="stars text-center">
                         <li><i class="fa fa-star"></i></li>
                         <li><i class="fa fa-star"></i></li>
                         <li><i class="fa fa-star"></i></li>
                         <li><i class="fa fa-star"></i></li>
                         <li><i class="fa fa-star"></i></li>
                       </ul>
-                      <button class="add">
-                       <a href="<?php echo "single_product.php?product_id=".$row['product_id']; ?>"> Add to Cart <i class="fa fa-shopping-cart"></i></a>
-                      </button>
+                      <br>
+                       <a class="btn buy-btn"  href="<?php echo "single_product.php?product_id=".$row['product_id']; ?>"> Add to Cart <i class="fa fa-shopping-cart"></i></a>
                     </div>
                   </div>
                 </div>
