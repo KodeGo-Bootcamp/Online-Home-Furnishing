@@ -69,7 +69,7 @@ foreach($_SESSION['cart'] as $key => $value) {
 //v. remove everything from the cart - delay until payment is done.
 // unset($_SESSION['cart']);
 
-
+$_SESSION['order_id'] = $order_id;
 
 //vi. inform the customer whether there's a problem or none. 
 header('location: ../payment.php?order_status=TOTAL AMOUNT TO PAY');
