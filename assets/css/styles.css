@@ -310,9 +310,9 @@ header .navbar {
 }
 
 /* add to cart */
-.cart-one {
+/* .cart-one {
   position: relative;
-}
+} */
 /* button{
   border: none;
   outline: none;
@@ -1016,6 +1016,8 @@ footer .inner-content p a {
 .product:hover img {
   opacity: 0.7;
 }
+
+
 
 /* Responsive Style */
 @media (width = 280px) {
