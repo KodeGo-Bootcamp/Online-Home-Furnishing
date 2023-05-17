@@ -52,5 +52,21 @@
         }
       }
     </script>
+
+<script>
+  
+  function search_product(){
+    alert( document.getElementById("search_box").value );
+    var elements = document.getElementsByName("product_img");
+      if(elements[1].hidden){
+          elements[1].hidden = false;
+          
+  
+      }else{
+          elements[1].hidden = true;
+      }
+  }
+  
+  </script>
   </body>
 </html>

@@ -4,7 +4,7 @@ include('server/connection.php');
 if (isset($_POST['search'])) {
   // Call a function to perform the desired action
   $query = $_POST['query'];
-  echo "<script> alert('".$query."'); </script>";
+  // echo "<script> alert('".$query."'); </script>";
   $stmt = $conn->prepare("SELECT * FROM products WHERE product_name LIKE '%". $query ."%' OR product_category LIKE '%". $query ."%'");
 }else{
   $stmt = $conn->prepare("SELECT * FROM products");
@@ -78,7 +78,7 @@ $products = $stmt->get_result();
             <div name="product_img" class="<?php echo $furn_cat; ?>"> 
               
                 <div class="product-item">
-                  <img class="prod-img" src="<?php echo $row['product_image']; ?>" />
+                  <img class="prod-img" src="assets/images/<?php echo $row['product_image']; ?>" />
                   <div class="down-content">
                     <a href="#"><?php echo "<script> temp_select1[".$temp_count."] = '".$row['product_name']."';</script>";?>
                       <h4>
@@ -117,24 +117,4 @@ $products = $stmt->get_result();
   </div>
 </div>
 <!-- ******************************************* -->
-      <?php include('layouts/footer.php');
-      function test_function($id)
-      {
-        echo '<script>alert("Welcome to Geeks for Geeks")</script>';
-      }
-      ?>
-<script>
-  
-function search_product(){
-	alert( document.getElementById("search_box").value );
-  var elements = document.getElementsByName("product_img");
-    if(elements[1].hidden){
-        elements[1].hidden = false;
-        
-
-    }else{
-        elements[1].hidden = true;
-    }
-}
-
-</script>
+      <?php include('layouts/footer.php');?>
