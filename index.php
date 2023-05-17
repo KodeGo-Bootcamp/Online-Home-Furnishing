@@ -107,7 +107,8 @@
                   <li><i class="fa fa-star"></i></li>
                   <li><i class="fa fa-star"></i></li>
                 </ul>
-                <button class="add">Add to Cart <i class="fa fa-shopping-cart"></i></button>
+                <a class="btn buy-btn" href="<?php echo "single_product.php?product_id=" . $row['product_id']; ?>"> Add
+                      to Cart <i class="fa fa-shopping-cart"></i></a>
               </div>
             </div>
           </div>
