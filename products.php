@@ -1,25 +1,20 @@
 <?php
-
+$place_holder = "Search Product";
+include('layouts/header.php');
 include('server/connection.php');
-if (isset($_POST['search'])) {
+if (isset($_POST['search']) && $_POST['query'] != "") {
   // Call a function to perform the desired action
+  echo "<script> var temp = 'search'; </script>";
   $query = $_POST['query'];
-  echo "<script> alert('".$query."'); </script>";
-  $stmt = $conn->prepare("SELECT * FROM products WHERE product_name LIKE '%". $query ."%' OR product_category LIKE '%". $query ."%'");
+  $products = mysqli_query($conn,"SELECT * FROM products WHERE product_name LIKE '%". $query ."%' OR product_category LIKE '%". $query ."%'");
+  $place_holder = $query;
 }else{
-  $stmt = $conn->prepare("SELECT * FROM products");
+  echo "<script> var temp = 'no_search'; </script>";
+  $products = mysqli_query($conn,"SELECT * FROM products");
 }
 
-$stmt->execute();
-$products = $stmt->get_result();
-
-
-
 ?>
-<?php include('layouts/header.php'); ?>
-<script>
-  var temp_select1 = [];
-</script>
+
 <!-- Page Content -->
 <div class="page-heading products-heading header-text">
   <div class="container">
@@ -42,16 +37,16 @@ $products = $stmt->get_result();
       <div class="col-md-12">
         <div class="filters">
           <ul>
-              <li class="active" data-filter="*">All Products</li>
+              <li id="all_products" class="active" data-filter="*" onclick="refresh_page()">All Products</li>
               <li data-filter=".tab">Tables</li>
               <li data-filter=".bed">Bed</li>
               <li data-filter=".cab">Cabinets</li>
               <li data-filter=".sof">Sofa</li>
           </ul>
           <!-- SEARCH BOX -->
-          <!--<input id="search_box" onchange="search_product()" type="text">-->
           <form action="products.php" method="POST">
-            <input type="text" name="query" placeholder="Search Product">
+            <input id="hid_text" type="text" value="<?php echo $place_holder; ?>" hidden="true">
+            <input type="text" name="query" placeholder="<?php echo $place_holder; ?>">
             <button type="submit" name="search">Search</button>
           </form>
         </div>
@@ -63,8 +58,7 @@ $products = $stmt->get_result();
 
             <?php
             $furn_cat = "";
-            $temp_count = 0 ;
-            while ($row = $products->fetch_assoc()) {
+            while ($row = mysqli_fetch_assoc($products)) {
               if($row['product_category'] == "Table"){
                 $furn_cat = "col-lg-4 col-md-4 all tab";
               }else if($row['product_category'] == "Bed"){
@@ -74,13 +68,14 @@ $products = $stmt->get_result();
               }else if($row['product_category'] == "Cabinet"){
                 $furn_cat = "col-lg-4 col-md-4 all cab";
               }
+              $furn_img = "assets/images/".$row['product_image'];
               ?>
             <div name="product_img" class="<?php echo $furn_cat; ?>"> 
               
                 <div class="product-item">
-                  <img class="prod-img" src="<?php echo $row['product_image']; ?>" />
+                  <img class="prod-img" src="<?php echo $furn_img; ?>" />
                   <div class="down-content">
-                    <a href="#"><?php echo "<script> temp_select1[".$temp_count."] = '".$row['product_name']."';</script>";?>
+                    <a href="#">
                       <h4>
                         <?php echo $row['product_name']; ?>
                       </h4>
@@ -105,9 +100,12 @@ $products = $stmt->get_result();
                 </div>
               </div>
             <?php 
-            
-            $temp_count++; 
             } 
+            if($row = mysqli_fetch_assoc($products)){
+              echo "<script> alert('awe'); </script>";
+            }else{
+              
+            }
             ?>
             </div>
           </div>
@@ -123,18 +121,17 @@ $products = $stmt->get_result();
         echo '<script>alert("Welcome to Geeks for Geeks")</script>';
       }
       ?>
+
 <script>
   
-function search_product(){
-	alert( document.getElementById("search_box").value );
-  var elements = document.getElementsByName("product_img");
-    if(elements[1].hidden){
-        elements[1].hidden = false;
-        
+function refresh_page(){
+	if(document.getElementById("hid_text").value != "Search Product"){
 
-    }else{
-        elements[1].hidden = true;
-    }
+    window.location.replace("products.php");
+  }else{
+
+  }
+
 }
 
 </script>
