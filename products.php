@@ -128,10 +128,7 @@ function refresh_page(){
 	if(document.getElementById("hid_text").value != "Search Product"){
 
     window.location.replace("products.php");
-  }else{
-
   }
-
 }
 
 </script>

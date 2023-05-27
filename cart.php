@@ -1,7 +1,7 @@
 <?php 
 
 session_start();
-
+$total = 0;
 if(isset($_POST['add_to_cart'])){
 
   //if the customer has already added a product to the cart
@@ -52,7 +52,7 @@ $_SESSION['cart'] [$product_id] = $product_array;
  }
 
  //calculate total cart
- calculateTotalCart();
+ //calculateTotalCart();
 
  //remove the product from the cart
 }else if(isset($_POST['remove_product'])){
@@ -61,7 +61,7 @@ $_SESSION['cart'] [$product_id] = $product_array;
   unset($_SESSION['cart'][$product_id]);
 
 //calculate total
-calculateTotalCart();
+//calculateTotalCart();
 
 
 
@@ -81,15 +81,14 @@ $product_array['product_quantity'] = $product_quantity;
 $_SESSION['cart'][$product_id] = $product_array;
 
 //calculate total
-calculateTotalCart();
+//calculateTotalCart();
 
 }else{
   // header('location: index.php');
 }
 
 function calculateTotalCart(){
-
-  $total = 0;
+ 
 
    foreach($_SESSION['cart'] as $key => $value) {
       $product = $_SESSION['cart'][$key];
@@ -144,7 +143,11 @@ function calculateTotalCart(){
                 </td>
                 <td>
                     <span>&#8369;</span>
-                    <span class="product-price"><?php echo $value['product_quantity'] * $value['product_price']; ?></span>
+                    <span class="product-price">
+                    <?php 
+                    echo $value['product_quantity'] * $value['product_price']; 
+                    $total = $total + ($value['product_quantity'] * $value['product_price']); 
+                    ?></span>
                 </td>
             </tr>
 
@@ -159,7 +162,7 @@ function calculateTotalCart(){
             </tr> -->
             <tr>
                 <td>Total </td>
-                <td>&#8369; <?php echo $_SESSION['total']; ?> </td>
+                <td>&#8369; <?php echo $total; ?> </td>
             </tr>
 
         </table>

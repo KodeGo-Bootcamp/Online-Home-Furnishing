@@ -1,3 +1,4 @@
+
 <?php
 
 session_start();
@@ -14,7 +15,7 @@ session_start();
 
 
     if(isset($_POST['register'])){
-
+      
       $name = $_POST['name'];
       $email = $_POST['email'];
       $password = $_POST['password'];
@@ -51,10 +52,8 @@ session_start();
                         }else{
 
                         //create a new user
-                      $stmt = $conn->prepare("INSERT INTO users (user_name,user_email,user_password)
-                                                      VALUES(?,?,?)");
-
-                      $stmt->bind_param('sss',$name,$email,md5($password));    
+                      $stmt = $conn->prepare("INSERT INTO users (user_name, user_email, user_password, cp_num, delivery_add) VALUES (?, ?, ?, ?, ?)");
+                      $stmt->bind_param("sssss", $name, $email,md5($password), $num, $address);
 
                       //if account was created successfully
                       if($stmt->execute()) {
@@ -62,6 +61,8 @@ session_start();
                       $_SESSION['user_id'] = $user_id;
                       $_SESSION['user_email'] = $email;
                       $_SESSION['user_name'] = $name;
+                      $_SESSION['cp_num'] = $num;
+                      $_SESSION['address'] = $address;
                       $_SESSION['logged_in'] = true;
                       header('location: account.php?register_success=Registered Successfully!');
 
@@ -89,22 +90,30 @@ session_start();
         <p style="color: red;"><?php if(isset($_GET['error'])) { echo $_GET['error'];} ?></p>
         <div class="form-group">
           <label>Name</label>
-          <input type="text" class="form-control" id="register-name" name="name" placeholder="Name" required>
+          <input type="text" class="form-control" name="name" placeholder="Name" required>
         </div>
         <div class="form-group">
           <label>Email</label>
-          <input type="text" class="form-control" id="register-email" name="email" placeholder="Email" required>
+          <input type="text" class="form-control" name="email" placeholder="Email" required>
         </div>
         <div class="form-group">
           <label>Password</label>
-          <input type="text" class="form-control" id="register-password" name="password" placeholder="Password"
+          <input type="password" class="form-control" name="password" placeholder="Password"
             required>
         </div>
         <div class="form-group">
           <label>Confirm Password</label>
-          <input type="text" class="form-control" id="register-confirm-password" name="confirmPassword"
+          <input type="password" class="form-control" name="confirmPassword"
             placeholder="Confirm Password" required>
         </div>
+        <div class="form-group">
+          <label>Contact Number</label>
+          <input type="text" class="form-control" name="num" placeholder="+63" required>
+        </div>
+        <div class="form-group">
+          <label>Delivery  Address</label>
+          <input type="text" class="form-control" name="address" placeholder="Delivery  Address" required>
+        </div> 
         <div class="form-group">
           <input type="submit" class="btn" id="register-btn" name="register" value="Register">
         </div>

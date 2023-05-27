@@ -1,12 +1,26 @@
-<?php
 
+<?php
 session_start();
+
+include('server/connection.php');
 
 if( !empty($_SESSION['cart'])){
 
   //let user IN
 
-
+  if(isset($_SESSION['logged_in'])){
+    //$products = mysqli_query($conn,"SELECT * FROM users WHERE product_name");
+    //$place_holder = $query;
+    $name = "value=".$_SESSION['user_name'];
+    $email = "value=".$_SESSION['user_email'];
+    $cp_num = "value=".$_SESSION['cp_num'];
+    $address = "value=".$_SESSION['address'];
+    }else{
+      $name = "placeholder='Name'";
+      $email = "placeholder='Email'";
+      $cp_num = "placeholder='+63'";
+      $address = "placeholder='Delivery Address'";
+    }
 
   //route user to the home page
 }else{
@@ -28,15 +42,15 @@ if( !empty($_SESSION['cart'])){
     <form id="checkout-form" method="POST" action="server/place_order.php">
       <div class="form-group checkout-small-element">
         <label>Name</label>
-        <input type="text" class="form-control" id="checkout-name" name="name" placeholder="Name" required>
+        <input type="text" class="form-control" id="checkout-name" name="name" <?php echo $name; ?> required>
       </div>
       <div class="form-group checkout-small-element">
         <label>Email</label>
-        <input type="text" class="form-control" id="checkout-email" name="email" placeholder="Email" required>
+        <input type="text" class="form-control" id="checkout-email" name="email" <?php echo $email; ?> required>
       </div>
       <div class="form-group checkout-small-element">
         <label>Phone</label>
-        <input type="tel" class="form-control" id="checkout-phone" name="phone" placeholder="+63" required>
+        <input type="tel" class="form-control" id="checkout-phone" name="phone" <?php echo $cp_num; ?> required>
       </div>
       <div class="form-group checkout-small-element">
         <label>City</label>
@@ -44,7 +58,7 @@ if( !empty($_SESSION['cart'])){
       </div>
       <div class="form-group checkout-large-element">
         <label>Address</label>
-        <input type="text" class="form-control" id="checkout-address" name="address" placeholder="Address" required>
+        <input type="text" class="form-control" id="checkout-address" name="address" <?php echo $address; ?> required>
       </div>
       <div class="form-group checkout-btn-container">
         <p>Total Amount: &#8369; <?php echo $_SESSION['total']; ?></p>
