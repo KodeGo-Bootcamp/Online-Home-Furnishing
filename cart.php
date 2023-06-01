@@ -52,7 +52,7 @@ $_SESSION['cart'] [$product_id] = $product_array;
  }
 
  //calculate total cart
- //calculateTotalCart();
+ calculateTotalCart();
 
  //remove the product from the cart
 }else if(isset($_POST['remove_product'])){
@@ -61,7 +61,7 @@ $_SESSION['cart'] [$product_id] = $product_array;
   unset($_SESSION['cart'][$product_id]);
 
 //calculate total
-//calculateTotalCart();
+calculateTotalCart();
 
 
 
@@ -81,7 +81,7 @@ $product_array['product_quantity'] = $product_quantity;
 $_SESSION['cart'][$product_id] = $product_array;
 
 //calculate total
-//calculateTotalCart();
+calculateTotalCart();
 
 }else{
   // header('location: index.php');
@@ -91,7 +91,7 @@ function calculateTotalCart(){
  
 
    foreach($_SESSION['cart'] as $key => $value) {
-      $product = $_SESSION['cart'][$key];
+    $product = $_SESSION['cart'][$key];
     $price = $product['product_price'];
     $quantity = $product['product_quantity'];
     $total = $total + $price * $quantity;
