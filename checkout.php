@@ -56,8 +56,9 @@ if( !empty($_SESSION['cart'])){
         <a class="" href="login.php"></a>
     <?php } ?>
     </p>
-    </form>
+    </form><br><br>
   </div>
 
+  <!-- Footer -->
   <?php include('layouts/footer-one.php'); ?>
 

@@ -1,90 +1,29 @@
-<?php
-
-include('server/connection.php');
-if (isset($_POST['search'])) {
-
-  // determine the page number
-  if(isset($_GET['page_no']) && $_GET['page_no'] !=""){
-    //if user has alredy entered page then page number is the one that they selected
-    $page_no = $_GET['page_no'];
-  }else{
-    //if user just entered the page then default page is number one.
-    $page_no = 1;
-  }
-
-  $query = $_POST['query'];
-
-   //return number of products
-   $stmt1 = $conn->prepare("SELECT COUNT(*) As total_records FROM products WHERE product_category=?");
-   $stmt1->bind_param('s',$query);
-   $stmt1->execute();
-   $stmt1->bind_result($total_records);
-   $stmt1->store_result();
-   $stmt1->fetch();
-
-     //products per page
-  $total_records_per_page = 9;
-  $offset = ($page_no-1) * $total_records_per_page;
-  $previous_page = $page_no - 1;
-  $next_page = $page_no + 1;
-  $adjacents = "2";
-  $total_no_of_pages = ceil($total_records/$total_records_per_page);
-
-      //get all products
-  $stmt2 = $conn->prepare("SELECT * FROM products WHERE product_category =? LIMIT $offset,$total_records_per_page");
-  $stmt2->bind_param("s",$query);
-  $stmt2->execute();
-  $products = $stmt2->get_result();
-
-  // Call a function to perform the desired action
-  
-  // echo "<script> alert('".$query."'); </script>";
-  // $stmt = $conn->prepare("SELECT * FROM products WHERE product_name LIKE '%". $query ."%' OR product_category LIKE '%". $query ."%'");
-
-  // $stmt->execute();
-  // $products = $stmt->get_result();
-
-}else{
-  // determine the page number
-  if(isset($_GET['page_no']) && $_GET['page_no'] !=""){
-    //if user has alredy entered page then page number is the one that they selected
-    $page_no = $_GET['page_no'];
-  }else{
-    //if user just entered the page then default page is number one.
-    $page_no = 1;
-  }
-    //return number of products
-  $stmt1 = $conn->prepare("SELECT COUNT(*) As total_records FROM products");
-  $stmt1->execute();
-  $stmt1->bind_result($total_records);
-  $stmt1->store_result();
-  $stmt1->fetch();
-
-  //products per page
-  $total_records_per_page = 9;
-  $offset = ($page_no-1) * $total_records_per_page;
-  $previous_page = $page_no - 1;
-  $next_page = $page_no + 1;
-  $adjacents = "2";
-  $total_no_of_pages = ceil($total_records/$total_records_per_page);
-
-  //get all products
-$stmt2 = $conn->prepare("SELECT * FROM products LIMIT $offset,$total_records_per_page");
-$stmt2->execute();
-$products = $stmt2->get_result();
-
-
-}
-?>
 
 <?php session_start(); ?>
+<?php
+include('server/connection.php');
+if (isset($_POST['search'])) {
+  // Call a function to perform the desired action
+  $query = $_POST['query'];
+  echo "<script> alert('".$query."'); </script>";
+  $stmt = $conn->prepare("SELECT * FROM products WHERE product_name LIKE '%". $query ."%' OR product_category LIKE '%". $query ."%'");
+}else{
+  $stmt = $conn->prepare("SELECT * FROM products");
+}
+
+$stmt->execute();
+$products = $stmt->get_result();
+?>
 
 
 
+<!-- Header -->
 <?php include('layouts/header.php'); ?>
 <script>
   var temp_select1 = [];
 </script>
+
+
 <!-- Page Content -->
 <div class="page-heading products-heading header-text">
   <div class="container">
@@ -108,9 +47,9 @@ $products = $stmt2->get_result();
         <div class="filters">
           <ul>
               <li class="active" data-filter="*">All Products</li>
-              <li data-filter=".tab">Table</li>
+              <li data-filter=".tab">Tables</li>
               <li data-filter=".bed">Bed</li>
-              <li data-filter=".cab">Cabinet</li>
+              <li data-filter=".cab">Cabinets</li>
               <li data-filter=".sof">Sofa</li>
           </ul>
           <!-- SEARCH BOX -->
@@ -183,39 +122,20 @@ $products = $stmt2->get_result();
 </div>
 
 
-<!-- Pagination -->
-<nav aria-label="Page navigation example">
-          <ul class="pagination justify-content-center">
+<!-- script -->
+<script>
+function search_product(){
+	alert( document.getElementById("search_box").value );
+  var elements = document.getElementsByName("product_img");
+    if(elements[1].hidden){
+        elements[1].hidden = false;
+        
 
-            <li class="page-item <?php if($page_no<=1){echo 'disabled';} ?>"><a class="page-link" href="<?php if($page_no <=1) {echo '#';} else { echo "?page_no=".($page_no-1);} ?>">Previous</a></li>
+    }else{
+        elements[1].hidden = true;
+    }
+}
+</script>
 
-            <li class="page-item"><a class="page-link" href="?page_no=1">1</a></li>
-            <li class="page-item"><a class="page-link" href="?page_no=2">2</a></li>
-
-            <?php if( $page_no >= 3 )  {?>
-            <li class="page-item"><a class="page-link" href="#">...</a></li>
-            <li class="page-item"><a class="page-link" href="<?php echo "?page_no=".$page_no;?>"><?php echo $page_no; ?></a></li>
-            <?php } ?>
-
-
-            <li class="page-item <?php if($page_no>= $total_no_of_pages){echo 'disabled';}?>"><a class="page-link" href="<?php if($page_no >= $total_no_of_pages) { echo '#';} else { echo "?page_no=".($page_no+1);}?>">Next</a></li>
-          </ul>
-        </nav>
-
-
-
-          <script>
-          function search_product(){
-            alert( document.getElementById("search_box").value );
-            var elements = document.getElementsByName("product_img");
-              if(elements[1].hidden){
-                  elements[1].hidden = false;
-              }else{
-                  elements[1].hidden = true;
-              }
-          }
-          </script>
-
-          
-<!-- ***************** Footer ************************** -->
-      <?php include('layouts/footer.php');?>
+<!-- Footer -->
+      <?php include('layouts/footer.php'); ?>

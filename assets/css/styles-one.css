@@ -353,6 +353,16 @@ button.add:hover {
   transform: scale(1.3);
   transition: 0.3s;
 }
+
+.cart-quantity {
+  background-color: red;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 50%;
+  margin: -3px;
+  font-size: 10px;
+}
+
 /* Banner Style */
 .banner {
   position: relative;
@@ -1393,11 +1403,6 @@ th:last-child {
   padding: 5px 20px;
   color: white;
   background-color: #a27b5c;
-  /* text-align: left; */
-}
-
-.orders th:nth-child(2) {
-  /* text-align: right; */
 }
 
 .orders td {
