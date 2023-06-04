@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include('layouts/header.php'); ?>
   
     <!-- Page Content -->
@@ -49,28 +50,6 @@
                 ipsum dolor sit amet, consectetur adipisic elit. Et,
                 consequuntur, modi mollitia corporis ipsa voluptate corrupti.
               </p>
-              <ul class="social-icons">
-                <li>
-                  <a
-                    href="https://www.facebook.com/profile.php?id=100091963431133"
-                    target="_blank"
-                    ><i class="fa fa-facebook"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="fa fa-instagram"></i></a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/orgs/KodeGo-Bootcamp/teams/online-home-furnishing"
-                    target="_blank"
-                    ><i class="fa fa-github"></i
-                  ></a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
@@ -152,81 +131,11 @@
               </form>
             </div>
           </div>
-          <!-- <div class="col-md-4">
-            <ul class="accordion">
-              <li>
-                <a>Accordion Title One</a>
-                <div class="content">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed
-                    voluptate nihil eumester consectetur similiqu
-                    consectetur.<br /><br />Lorem ipsum dolor sit amet,
-                    consectetur adipisic elit. Et, consequuntur, modi mollitia
-                    corporis ipsa voluptate corrupti elite.
-                  </p>
-                </div>
-              </li> -->
-              <!-- <li>
-                  <a>Second Title Here</a>
-                  <div class="content">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed voluptate nihil eumester consectetur similiqu consectetur.<br><br>Lorem ipsum dolor sit amet, consectetur adipisic elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti elite.</p>
-                  </div>
-              </li>
-              <li>
-                  <a>Accordion Title Three</a>
-                  <div class="content">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed voluptate nihil eumester consectetur similiqu consectetur.<br><br>Lorem ipsum dolor sit amet, consectetur adipisic elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti elite.</p>
-                  </div>
-              </li>
-              <li>
-                  <a>Fourth Accordion Title</a>
-                  <div class="content">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed voluptate nihil eumester consectetur similiqu consectetur.<br><br>Lorem ipsum dolor sit amet, consectetur adipisic elit. Et, consequuntur, modi mollitia corporis ipsa voluptate corrupti elite.</p>
-                  </div>
-              </li> -->
-            </ul>
           </div>
         </div>
       </div>
     </div>
+    <br><br>
 
-    <!-- <div class="happy-clients">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h2>Our Happy Customers</h2>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="owl-clients owl-carousel">
-              <div class="client-item">
-                <img src="assets/images/client-01.png" alt="1">
-              </div>
-              
-              <div class="client-item">
-                <img src="assets/images/client-01.png" alt="2">
-              </div>
-              
-              <div class="client-item">
-                <img src="assets/images/client-01.png" alt="3">
-              </div>
-              
-              <div class="client-item">
-                <img src="assets/images/client-01.png" alt="4">
-              </div>
-              
-              <div class="client-item">
-                <img src="assets/images/client-01.png" alt="5">
-              </div>
-              
-              <div class="client-item">
-                <img src="assets/images/client-01.png" alt="6">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
+   <!-- Footer  -->
   <?php include('layouts/footer.php'); ?>

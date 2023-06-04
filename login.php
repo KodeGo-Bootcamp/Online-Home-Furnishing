@@ -83,4 +83,6 @@ if(isset($_SESSION['logged_in'])){
         </div>
       </form>
     </div>
+
+    <!-- Footer -->
     <?php include('layouts/footer-one.php'); ?>

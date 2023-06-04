@@ -156,10 +156,6 @@ function calculateTotalCart(){
         </table>
         <div class="cart-total">
         <table>
-            <!-- <tr>
-                <td>Subtotal</td>
-                <td>&#8369; 12, 299</td>
-            </tr> -->
             <tr>
                 <td>Total </td>
                 <td>&#8369; <?php echo $_SESSION['total']; ?> </td>
@@ -175,5 +171,6 @@ function calculateTotalCart(){
         
     </div>
     </section>
+    <br><br><br><br>
 
   <?php include('layouts/footer-one.php'); ?>

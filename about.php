@@ -1,3 +1,5 @@
+
+<?php session_start(); ?>
 <?php include('layouts/header.php'); ?>
  
 
@@ -25,7 +27,7 @@
           </div>
           <div class="col-md-6">
             <div class="right-image">
-              <img src="assets/images/feature-image.jpg" alt="" />
+              <img src="assets/images/logo-01.png" alt="" />
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
@@ -56,28 +58,6 @@
                 possible shopping experience. Thank you for choosing our store
                 for your home furnishing needs.
               </p>
-              <ul class="social-icons">
-                <li>
-                  <a
-                    href="https://www.facebook.com/profile.php?id=100091963431133"
-                    target="_blank"
-                    ><i class="fa fa-facebook"></i
-                  ></a>
-                </li>
-                <li>
-                  <a href=""><i class="fa fa-instagram"></i></a>
-                </li>
-                <li>
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                </li>
-                <li>
-                  <a
-                    href="https://github.com/KodeGo-Bootcamp/Online-Home-Furnishing"
-                    target="_blank"
-                    ><i class="fa fa-github"></i
-                  ></a>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
@@ -194,132 +174,9 @@
               </div>
             </div>
           </div>
-          <!-- <div class="col-md-4">
-            <div class="team-member">
-              <div class="thumb-container">
-                <img src="assets/images/team_05.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="hover-content">
-                    <ul class="social-icons">
-                      <li><a href="#"><i class="fa fa-github"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="down-content">
-                <h4>George Walker</h4>
-                <span>Product Photographer</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>
-              </div>
-            </div>
-          </div> -->
-          <!-- <div class="col-md-4">
-            <div class="team-member">
-              <div class="thumb-container">
-                <img src="assets/images/team_06.jpg" alt="">
-                <div class="hover-effect">
-                  <div class="hover-content">
-                    <ul class="social-icons">
-                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                      <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="down-content">
-                <h4>Kate Town</h4>
-                <span>General Manager</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing itaque corporis nulla.</p>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
     </div>
-
-    <!-- <div class="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="service-item">
-              <div class="icon">
-                <i class="fa fa-gear"></i>
-              </div>
-              <div class="down-content">
-                <h4>Product Management</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat.</p>
-                <a href="#" class="filled-button">Read More</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-item">
-              <div class="icon">
-                <i class="fa fa-gear"></i>
-              </div>
-              <div class="down-content">
-                <h4>Customer Relations</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat.</p>
-                <a href="#" class="filled-button">Details</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-item">
-              <div class="icon">
-                <i class="fa fa-gear"></i>
-              </div>
-              <div class="down-content">
-                <h4>Global Collection</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur an adipisicing elit. Itaque, corporis nulla at quia quaerat.</p>
-                <a href="#" class="filled-button">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="happy-clients">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h2>Happy Partners</h2>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="owl-clients owl-carousel">
-              <div class="client-item">
-                <img src="assets/images/client-01.png" alt="1">
-              </div>
-              
-              <div class="client-item">
-                <img src="assets/images/client-01.png" alt="2">
-              </div>
-              
-              <div class="client-item">
-                <img src="assets/images/client-01.png" alt="3">
-              </div>
-              
-              <div class="client-item">
-                <img src="assets/images/client-01.png" alt="4">
-              </div>
-              
-              <div class="client-item">
-                <img src="assets/images/client-01.png" alt="5">
-              </div>
-              
-              <div class="client-item">
-                <img src="assets/images/client-01.png" alt="6">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-
+    
+<!-- Footer -->
   <?php include('layouts/footer.php'); ?>

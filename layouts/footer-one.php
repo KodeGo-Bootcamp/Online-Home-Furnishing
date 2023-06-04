@@ -1,25 +1,58 @@
 <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="inner-content">
-              <p>
-                Copyright &copy; Online Home Furnishing
-                <a
-                  rel="nofollow noopener"
-                  href="https://github.com/orgs/KodeGo-Bootcamp/teams/online-home-furnishing"
-                  target="_blank"
-                  >Group 4</a>
-              </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-box">
+                        <img class="footer-logo" src="assets/images/logo-02.png" alt=""> 
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-box">
+                        <h2>QUICK LINKS</h2>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                    </div>                    
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-box socials">
+                        <h2>FOLLOW US</h2>
+                    <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+                    </ul>
+                    </div>                    
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single-box">
+                        <h2>SIGN UP FOR OUR NEWSLETTER</h2>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Email Address" aria-label="Enter your Email ..." aria-describedby="basic-addon2">
+                            <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-envelope"></i></i></span>
+                </div>
+                <br>
+                <br>
+                <div class="card-area">
+                            <i class="fa fa-cc-visa"></i>
+                            <i class="fa fa-credit-card"></i>
+                            <i class="fa fa-cc-mastercard"></i>
+                            <i class="fa fa-cc-paypal"></i>
+                    </div>
             </div>
-          </div>
         </div>
-      </div>
+        <div class="footer_copyright">
+    <div class="page-width">
+      <small>Copyright &copy; 2023, <a href="index.php" title="">Home Furnishing</a>.</small>
+    </div>
+  </div>
     </footer>
 
 
+
     <div onclick="scrollToTop()" class="scrollTop">
-      <i class="fa-solid fa-chevron-up"></i>
+    <i class="fa-solid fa-arrow-up"></i>
     </div>
 
 <script>
