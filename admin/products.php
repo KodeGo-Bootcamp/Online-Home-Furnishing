@@ -66,6 +66,14 @@
         <p class="text-center" style="color: red;"><?php echo $_GET['edit_failure_message']; ?></p>
         <?php } ?>
 
+        <?php if(isset($_GET['deleted_failure'])) { ?>
+        <p class="text-center" style="color: red;"><?php echo $_GET['deleted_failure']; ?></p>
+        <?php } ?>
+
+        <?php if(isset($_GET['deleted_successfully'])) { ?>
+        <p class="text-center" style="color: green;"><?php echo $_GET['deleted_successfully']; ?></p>
+        <?php } ?>
+
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
@@ -90,7 +98,7 @@
               <td><?php echo $product['product_special_offer'] . "%";?></td>
               <td><?php echo $product['product_category'];?></td>
               <td><a class="btn btn-primary" href="edit_product.php?product_id=<?php echo $product['product_id'];?>">Edit</a></td>
-              <td><a class="btn btn-danger" href="">Delete</a></td>
+              <td><a class="btn btn-danger" href="delete_product.php?product_id=<?php echo $product['product_id'];?>">Delete</a></td>
             </tr>
             <?php } ?>
           </tbody>
