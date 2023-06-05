@@ -29,7 +29,7 @@
                 <p style="color: red;"><?php if(isset($_GET['error'])){ echo $_GET['error']; }?></p>
                 <div class="form-group mt-2">
                     <label>Title</label>
-                    <input type="text" class="form-control" id="product-name" name="title" placeholder="Title" required/>
+                    <input type="text" class="form-control" id="product-name" name="name" placeholder="Title" required/>
                 </div>
                   <div class="form-group mt-2">
                       <label>Description</label>
@@ -37,7 +37,7 @@
                   </div>
                   <div class="form-group mt-2">
                     <label>Price</label>
-                    <input type="number" class="form-control" id="product-price" name="price" placeholder="Price" required/>
+                    <input type="text" class="form-control" id="product-price" name="price" placeholder="Price" required/>
                 </div>
                  <div class="form-group mt-2">
                     <label>Special Offer/Sale</label>

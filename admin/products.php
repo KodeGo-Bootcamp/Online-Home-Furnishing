@@ -74,6 +74,22 @@
         <p class="text-center" style="color: green;"><?php echo $_GET['deleted_successfully']; ?></p>
         <?php } ?>
 
+        <?php if(isset($_GET['product_created'])) { ?>
+        <p class="text-center" style="color: green;"><?php echo $_GET['product_created']; ?></p>
+        <?php } ?>
+
+        <?php if(isset($_GET['product_failed'])) { ?>
+        <p class="text-center" style="color: red;"><?php echo $_GET['product_failed']; ?></p>
+        <?php } ?>
+
+        <?php if(isset($_GET['images_updated'])) { ?>
+        <p class="text-center" style="color: green;"><?php echo $_GET['images_updated']; ?></p>
+        <?php } ?>
+
+        <?php if(isset($_GET['images_failed'])) { ?>
+        <p class="text-center" style="color: red;"><?php echo $_GET['images_failed']; ?></p>
+        <?php } ?>
+
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
