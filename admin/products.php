@@ -18,7 +18,7 @@
         $page_no = 1;
       }
         //return number of products
-      $stmt1 = $conn->prepare("SELECT COUNT(*) As total_records FROM orders");
+      $stmt1 = $conn->prepare("SELECT COUNT(*) As total_records FROM products");
       $stmt1->execute();
       $stmt1->bind_result($total_records);
       $stmt1->store_result();
@@ -33,9 +33,9 @@
       $total_no_of_pages = ceil($total_records/$total_records_per_page);
 
         //get all products
-      $stmt2 = $conn->prepare("SELECT * FROM orders LIMIT $offset,$total_records_per_page");
+      $stmt2 = $conn->prepare("SELECT * FROM products LIMIT $offset,$total_records_per_page");
       $stmt2->execute();
-      $orders = $stmt2->get_result();
+      $products = $stmt2->get_result();
 ?>
 
 <div class="container-fluid">
@@ -56,31 +56,31 @@
 
     
 
-      <h2>Orders</h2>
+      <h2>Products</h2>
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
             <tr>
-              <th scope="col">Order ID</th>
-              <th scope="col">Order Status</th>
-              <th scope="col">User ID</th>
-              <th scope="col">Order Date</th>
-              <th scope="col">User Phone</th>
-              <th scope="col">User Address</th>
+              <th scope="col">Product ID</th>
+              <th scope="col">Product Image</th>
+              <th scope="col">Product Name</th>
+              <th scope="col">Product Price</th>
+              <th scope="col">Product Offer</th>
+              <th scope="col">Product Category</th>
               <th scope="col">Edit</th>
               <th scope="col">Delete</th>
             </tr>
           </thead>
           <tbody>
-            <?php foreach($orders as $order){?>
+            <?php foreach($products as $product){?>
             <tr>
-              <td><?php echo $order['order_id'];?></td>
-              <td><?php echo $order['order_status'];?></td>
-              <td><?php echo $order['user_id'];?></td>
-              <td><?php echo $order['order_date'];?></td>
-              <td><?php echo $order['user_phone'];?></td>
-              <td><?php echo $order['user_address'];?></td>
-              <td><a class="btn btn-primary" href="">Edit</a></td>
+              <td><?php echo $product['product_id'];?></td>
+              <td><img src="<?php echo "../assets/images/". $product['product_image'];?>" style="width: 70px; height: 70px"></td>
+              <td><?php echo $product['product_name'];?></td>
+              <td>&#8369; <?php echo $product['product_price'];?></td>
+              <td><?php echo $product['product_special_offer'] . "%";?></td>
+              <td><?php echo $product['product_category'];?></td>
+              <td><a class="btn btn-primary" href="edit_product.php?product_id=<?php echo $product['product_id'];?>">Edit</a></td>
               <td><a class="btn btn-danger" href="">Delete</a></td>
             </tr>
             <?php } ?>
