@@ -8,13 +8,13 @@
     var last_pick = "empty";
 function selected(show_select){
     document.getElementById(show_select).removeAttribute('hidden');
-    document.getElementById("tbl_search").style.display = "none";
+    
     document.getElementById("h_sel_data").textContent = show_select;
     if(last_pick != show_select && last_pick != "empty"){
         document.getElementById(last_pick).setAttribute('hidden','false');
         last_pick = show_select;
     }else{ 
-        last_pick = show_select; 
+        last_pick = show_select;
     }
 
     document.getElementById("form_search").style.display = "inline";
@@ -22,6 +22,12 @@ function selected(show_select){
     if(show_select == "order_items" || show_select == "orders"){
         element.style.display = "inline";
     }else{ element.style.display = "none"; }
+
+    if(document.getElementById("tbl_update")){
+        document.getElementById("tbl_update").style.display = "none";
+    }else if(document.getElementById("tbl_search")){
+        document.getElementById("tbl_search").style.display = "none";
+    }
 }
 </script>
 <body>
