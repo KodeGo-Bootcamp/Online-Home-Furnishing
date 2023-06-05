@@ -1,110 +1,41 @@
+<?php include('header.php'); ?>
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.88.1">
-    <title>Dashboard Template · Bootstrap v5.1</title>
+<?php
+        if(isset($_GET['product_id'])) {
+          $product_id = $_GET['product_id'];
+        $stmt = $conn->prepare("SELECT * FROM products WHERE product_id=?");
+        $stmt->bind_param('i',$product_id);
+        $stmt->execute();
+        $products = $stmt->get_result();
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/dashboard/">
+        }else if(isset($_POST['edit_btn'])){
 
-    
+          $product_id = $_POST['product_id'];
+          $title = $_POST['title'];
+          $description = $_POST['description'];
+          $price = $_POST['price'];
+          $offer = $_POST['offer'];
+          $category = $_POST['category'];
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#7952b3">
+          $stmt = $conn->prepare("UPDATE products SET product_name=?, product_description=?, product_price=?, product_special_offer=?,product_category=? WHERE product_id=?");
+          $stmt->bind_param('sssssi',$title,$description,$price,$offer,$category,$product_id);
 
+          if($stmt->execute()) {
+            header('location: products.php?edit_success_message=Product has been updated successfully');
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
+        }else{
+          header('location: products.php?edit_failure_message=Error occurred. Try Again.');
+          exit();
         }
       }
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="dashboard.css" rel="stylesheet">
-  </head>
-  <body>
-    
-<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company name</a>
-  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  
-  <div class="navbar-nav">
-    <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
-    </div>
-  </div>
-</header>
+?>
 
 <div class="container-fluid">
   <div class="row"  style="min-height: 1000px">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-      <div class="position-sticky pt-3">
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
-              <span data-feather="home"></span>
-              Dashboard
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="file"></span>
-              Orders
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="shopping-cart"></span>
-              Products
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="users"></span>
-              Customers
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="bar-chart-2"></span>
-              Account
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="layers"></span>
-              Help
-            </a>
-          </li>
-        </ul>
 
-     
-      </div>
-    </nav>
+      <!-- side menu -->
+      <?php include('sidemenu.php'); ?>
+
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -125,45 +56,45 @@
 
 
           <div class="mx-auto container">
-              <form id="edit-form"  enctype="multipart/form-data">
+              <form id="edit-form" method="POST" action="edit_product.php">
                 <p style="color: red;"><?php if(isset($_GET['error'])){ echo $_GET['error']; }?></p>
                 <div class="form-group mt-2">
+
+               <?php foreach($products as $product) { ?>
+
+                <input type="hidden" name="product_id" value="<?php echo $product['product_id']; ?>">
                     <label>Title</label>
-                    <input type="text" class="form-control" id="product-name" name="title" placeholder="Title" required/>
+                    <input type="text" class="form-control" id="product-name" value="<?php echo $product['product_name']?>" name="title" placeholder="Title" required/>
                 </div>
                   <div class="form-group mt-2">
                       <label>Description</label>
-                      <input type="text" class="form-control" id="product-desc" name="description" placeholder="Description" required/>
+                      <input type="text" class="form-control" id="product-desc" value="<?php echo $product['product_description']?>" name="description" placeholder="Description" required/>
                   </div>
                   <div class="form-group mt-2">
                     <label>Price</label>
-                    <input type="number" class="form-control" id="product-price" name="price" placeholder="Price" required/>
+                    <input type="text" class="form-control" id="product-price" value="<?php echo $product['product_price']?>" name="price" placeholder="Price" required/>
                 </div>
                 <div class="form-group mt-2">
                     <label>Category</label>
                     <select  class="form-select" required name="category">
-                        <option value="bags">Bags</option>
-                        <option value="shoes">Shoes</option>
-                        <option value="watches">Watches</option>
-                        <option value="clothes">Clothes</option>
+                        <option value="Table">Table</option>
+                        <option value="Bed">Bed</option>
+                        <option value="Cabinet">Cabinet</option>
+                        <option value="Sofa">Sofa</option>
                     </select>
                 </div>
-                
-                  <div class="form-group mt-2">
-                      <label>Color</label>
-                      <input type="text" class="form-control" id="product-color" name="color" placeholder="Color" required/>
-                  </div>
 
               <div class="form-group mt-2">
                     <label>Special Offer/Sale</label>
-                    <input type="number" class="form-control" id="product-offer" name="offer" placeholder="Sale %" required/>
+                    <input type="number" class="form-control" id="product-offer" value="<?php echo $product['product_special_offer']?>" name="offer" placeholder="Sale %" required/>
                 </div>
-
 
 
                 <div class="form-group mt-3">
-                    <input type="submit" class="btn btn-primary" name="edit_product" value="Edit"/>
+                    <input type="submit" class="btn btn-primary" name="edit_btn" value="Edit"/>
                 </div>
+
+                <?php } ?>
  
               </form>
           </div>

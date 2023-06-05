@@ -57,7 +57,6 @@ $user_id = $_SESSION['user_id'];
 $stmt = $conn->prepare("SELECT * FROM orders WHERE user_id = ?");
 $stmt->bind_param('i',$user_id);
 $stmt->execute();
-
 $orders = $stmt->get_result();
 
 
