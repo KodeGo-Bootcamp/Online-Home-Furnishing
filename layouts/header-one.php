@@ -8,7 +8,7 @@
     />
     <meta
       name="description"
-      content="This is an Online Furniture Store made by Group 4 from WD47P"
+      content="This is an Online Furniture Store made by Group 4 from WD47P KodeGo Bootcamp 2023"
     />
     <meta name="title" content="Online Home Furnishing" />
     <link
