@@ -59,6 +59,17 @@
     
 
       <h2>Orders</h2>
+
+      <?php if(isset($_GET['order_updated'])) { ?>
+        <p class="text-center" style="color: green;"><?php echo $_GET['order_updated']; ?></p>
+        <?php } ?>
+
+        <?php if(isset($_GET['order_failed'])) { ?>
+        <p class="text-center" style="color: red;"><?php echo $_GET['order_failed']; ?></p>
+        <?php } ?>
+
+
+
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
