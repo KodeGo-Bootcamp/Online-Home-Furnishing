@@ -82,7 +82,7 @@
               <td><?php echo $order['order_date'];?></td>
               <td><?php echo $order['user_phone'];?></td>
               <td><?php echo $order['user_address'];?></td>
-              <td><a class="btn btn-primary" href="">Edit</a></td>
+              <td><a class="btn btn-primary" href="edit_order.php?order_id=<?php echo $order['order_id']?>">Edit</a></td>
               <td><a class="btn btn-danger" href="">Delete</a></td>
             </tr>
             <?php } ?>
