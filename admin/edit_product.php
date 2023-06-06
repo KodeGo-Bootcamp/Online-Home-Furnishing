@@ -21,10 +21,10 @@
           $stmt->bind_param('sssssi',$title,$description,$price,$offer,$category,$product_id);
 
           if($stmt->execute()) {
-            header('location: products.php?edit_success_message=Product has been updated successfully');
+            header('location: admin_products.php?edit_success_message=Product has been updated successfully');
 
         }else{
-          header('location: products.php?edit_failure_message=Error occurred. Try Again.');
+          header('location: admin_products.php?edit_failure_message=Error occurred. Try Again.');
           exit();
         }
       }

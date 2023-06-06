@@ -21,7 +21,7 @@
             header('location: index.php?order_updated=Order has been updated successfully');
 
         }else{
-          header('location: products.php?order_failed=Error occurred. Try Again.');
+          header('location: admin_products.php?order_failed=Error occurred. Try Again.');
           }
 
         }else{

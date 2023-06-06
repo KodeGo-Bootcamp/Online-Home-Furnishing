@@ -1,13 +1,15 @@
-<?php include('header.php'); ?>
+<?php 
 
-<?php
+include('header.php');
 
 if(isset($_GET['product_id'])){
+
   $product_id = $_GET['product_id'];
   $product_name = $_GET['product_name'];
 } else{
-  header('location: products.php');
+  header('location: admin_products.php');
 }
+
 ?>
 
 
@@ -36,7 +38,7 @@ if(isset($_GET['product_id'])){
 
 
           <div class="mx-auto container">
-              <form id="edit-image-form"  enctype="multipart/form-data" method="POST" action="update_images.php">
+              <form id="edit-image-form"  enctype="multipart/form-data" method="post" action="update_images.php">
                 <p style="color: red;"><?php if(isset($_GET['error'])){ echo $_GET['error']; }?></p>
             
               <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
@@ -64,7 +66,7 @@ if(isset($_GET['product_id'])){
           
 
                 <div class="form-group mt-3">
-                    <input type="submit" class="btn btn-primary" name="create_product" value="Create"/>
+                    <input type="submit" class="btn btn-primary" name="update_images" value="Update"/>
                 </div>
  
               </form>

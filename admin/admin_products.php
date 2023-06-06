@@ -1,6 +1,6 @@
-<?php include('header.php'); ?>
+<?php 
 
-<?php
+include('header.php'); 
 
   if(!isset($_SESSION['admin_logged_in'])) {
       header('location: login.php');
@@ -118,7 +118,7 @@
               <td><a class="btn btn-primary" href="edit_product.php?product_id=<?php echo $product['product_id'];?>">Edit</a></td>
               <td><a class="btn btn-danger" href="delete_product.php?product_id=<?php echo $product['product_id'];?>">Delete</a></td>
             </tr>
-            <?php } ?>
+            <?php }?>
           </tbody>
         </table>
 
