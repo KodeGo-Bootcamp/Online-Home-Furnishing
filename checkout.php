@@ -1,6 +1,6 @@
-<?php
+<?php include('layouts/header-one.php'); ?>
 
-session_start();
+<?php
 
 if( !empty($_SESSION['cart'])){
 
@@ -17,8 +17,6 @@ if( !empty($_SESSION['cart'])){
 
 
 ?>
-
-<?php include('layouts/header-one.php'); ?>
 
 <!-- Checkout -->
 <div class="container text-center mt-3 pt-5">

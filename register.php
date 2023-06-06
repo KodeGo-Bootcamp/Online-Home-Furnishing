@@ -1,6 +1,5 @@
+<?php include('layouts/header-one.php'); ?>
 <?php
-
-session_start();
 
     include('server/connection.php');
 
@@ -77,8 +76,6 @@ session_start();
     }
 
 ?>
-
-<?php include('layouts/header-one.php'); ?>
 
     <!-- Register -->
     <div class="container text-center mt-3 pt-5">

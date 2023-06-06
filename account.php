@@ -1,6 +1,7 @@
+<?php include('layouts/header-one.php'); ?>
+
 <?php
 
-session_start();
 include('server/connection.php');
 
 if(!isset($_SESSION['logged_in'])){
@@ -62,9 +63,6 @@ $orders = $stmt->get_result();
 
 }
 ?>
-
-
-<?php include('layouts/header-one.php'); ?>
 
     <!-- Account -->
     <div class="row container mx-auto">

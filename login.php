@@ -1,6 +1,5 @@
+<?php include('layouts/header-one.php'); ?>
 <?php
-
-session_start();
 
 include('server/connection.php');
 
@@ -43,8 +42,6 @@ if(isset($_SESSION['logged_in'])){
 
   }
   ?>
-
-  <?php include('layouts/header-one.php'); ?>
 
     <!-- Login -->
     <div class="container text-center mt-3 pt-5">

@@ -1,3 +1,4 @@
+<?php include('layouts/header-one.php'); ?>
 <?php
 
 /*
@@ -48,9 +49,6 @@ function calculateTotalOrderPrice($order_details){
 
 
 ?>
-
-<?php include('layouts/header-one.php'); ?>
-
     <!-- Order Details -->
     <div id="orders" class="orders container my-5 py-3">
       <div class="container mt-5">

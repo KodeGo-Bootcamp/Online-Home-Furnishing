@@ -1,5 +1,4 @@
-
-<?php session_start(); ?>
+<?php include('layouts/header.php'); ?>
 <?php
 include('server/connection.php');
 if (isset($_POST['search'])) {
@@ -16,9 +15,6 @@ $products = $stmt->get_result();
 ?>
 
 
-
-<!-- Header -->
-<?php include('layouts/header.php'); ?>
 <script>
   var temp_select1 = [];
 </script>

@@ -1,5 +1,5 @@
+<?php include('layouts/header-one.php'); ?>
 <?php
-session_start();
 
 if(isset($_POST['order_pay_btn'])) {
 $order_statu = $_POST['order_status'];
@@ -7,17 +7,11 @@ $order_total_price = $_POST['order_total_price'];
 }
 ?>
 
-<?php include('layouts/header-one.php'); ?>
-
-
 <!-- Payment -->
 <div class="container text-center mt-3 pt-5">
     <h3 class="form-weight-bold">Payment</h3>
   </div>
-  <div class="mx-auto text-center container">
-
-
-
+  <div class="mx-auto text-center container" style="display: flex; flex-direction: column; align-items: center;">
     <?php if(isset($_SESSION['total']) && $_SESSION['total'] !=0) { ?>
         <?php $amount = strval($_SESSION['total']); ?>
     <p>Total Payment:  &#8369;  <?php echo $_SESSION['total']; ?></p>
@@ -77,5 +71,5 @@ createOrder: function(data, actions) {
       }).render('#paypal-button-container');
     </script>
 
-
+<!-- Footer -->
   <?php include('layouts/footer-one.php'); ?>

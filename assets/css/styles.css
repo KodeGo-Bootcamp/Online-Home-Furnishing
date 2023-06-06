@@ -48,7 +48,7 @@ ul.social-icons li a {
   height: 50px;
   display: inline-block;
   line-height: 50px;
-  background-color: #a27b5c;
+  background-color: black;
   color: #dcd7c9;
   font-size: 18px;
   text-align: center;
@@ -57,11 +57,11 @@ ul.social-icons li a {
 
 ul.social-icons li a:hover {
   background-color: #dcd7c9;
-  color: #a27b5c;
+  color: black;
 }
 
 a.filled-button {
-  background-color: #a27b5c;
+  background-color: black;
   color: #fff;
   font-size: 14px;
   text-transform: capitalize;
@@ -127,7 +127,7 @@ a.filled-button:hover {
 
 #preloader {
   overflow: hidden;
-  background: #a27b5c;
+  background: black;
   left: 0;
   right: 0;
   top: 0;
@@ -240,7 +240,7 @@ header .navbar {
 .background-header .navbar-nav .nav-link.active,
 .background-header .navbar-nav .nav-link.show,
 .background-header .navbar-nav .show > .nav-link {
-  color: #a27b5c !important;
+  color: black !important;
 }
 .navbar .navbar-brand {
   float: left;
@@ -257,10 +257,10 @@ header .navbar {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
-.navbar .navbar-brand h2 em {
+/* .navbar .navbar-brand h2 em {
   font-style: normal;
   color: #a27b5c;
-}
+} */
 
 #navbarResponsive {
   z-index: 999;
@@ -287,7 +287,7 @@ header .navbar {
 .navbar .navbar-nav .show > .nav-link {
   color: #fff;
   padding-bottom: 25px;
-  border-bottom: 3px solid #a27b5c;
+  /* border-bottom: 3px solid black; */
 }
 .navbar .navbar-toggler-icon {
   background-image: none;
@@ -365,6 +365,11 @@ button.add:hover {
   border-radius: 50%;
   margin: -3px;
   font-size: 10px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
 }
 
 /* Banner Style */
@@ -617,17 +622,16 @@ button.add:hover {
 }
 .scrollTop:hover {
   background-color: #f7f7f7;
-  color: #a27b5c;
+  color: black;
 }
 
 /* Footer */
 footer {
   background: #000;
-  padding-top: 50px;
 }
 
 .footer-logo {
-  width: 110px;
+  width: 140px;
 }
 
 .footer_copyright {
@@ -787,7 +791,7 @@ footer {
 
 .team-member .thumb-container .hover-effect {
   position: absolute;
-  background-color: #dcd7c9;
+  background-color: white;
   top: 0;
   left: 0;
   width: 100%;
@@ -813,8 +817,8 @@ footer {
   ul.social-icons
   li
   a:hover {
-  background-color: #fff;
-  color: #a27b5c;
+  background-color: white;
+  color: gray;
 }
 
 .team-member:hover .hover-effect {
@@ -831,7 +835,7 @@ footer {
 .team-member .down-content span {
   display: block;
   font-size: 13px;
-  color: #a27b5c;
+  color: black;
   font-weight: 500;
   margin-bottom: 20px;
 }

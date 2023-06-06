@@ -1,3 +1,4 @@
+<?php include('layouts/header-one.php'); ?>
 <?php 
 
 include('server/connection.php');
@@ -21,7 +22,6 @@ if(isset($_GET['product_id'])){
 }
 
 ?>
-<?php include('layouts/header-one.php'); ?>
 
     <!-- Single Product -->
     <div class="container single-product my-5">

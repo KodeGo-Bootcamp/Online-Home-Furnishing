@@ -127,7 +127,7 @@ a.filled-button:hover {
 
 #preloader {
   overflow: hidden;
-  background: #a27b5c;
+  background: black;
   left: 0;
   right: 0;
   top: 0;
@@ -239,7 +239,7 @@ header .navbar {
 .background-header .navbar-nav .nav-link.active,
 .background-header .navbar-nav .nav-link.show,
 .background-header .navbar-nav .show > .nav-link {
-  color: #a27b5c !important;
+  color: black !important;
 }
 .navbar .navbar-brand {
   float: left;
@@ -286,7 +286,7 @@ header .navbar {
 .navbar .navbar-nav .show > .nav-link {
   color: #fff;
   padding-bottom: 25px;
-  border-bottom: 3px solid #a27b5c;
+  /* border-bottom: 3px solid #a27b5c; */
 }
 .navbar .navbar-toggler-icon {
   background-image: none;
@@ -641,17 +641,16 @@ button.add:hover {
 }
 .scrollTop:hover {
   background-color: #f7f7f7;
-  color: #a27b5c;
+  color: black;
 }
 
 /* Footer */
 footer {
-  background: #101010;
-  padding-top: 50px;
+  background: black;
 }
 
 .footer-logo {
-  width: 110px;
+  width: 140px;
 }
 
 .footer_copyright {
@@ -1191,7 +1190,7 @@ footer {
 }
 
 #login-form #register-url {
-  color: #a27b5c;
+  color: black;
 }
 
 /* Register styling */
@@ -1215,7 +1214,7 @@ footer {
 }
 
 #register-form #login-url {
-  color: #a27b5c;
+  color: black;
 }
 
 /* Accounts */
@@ -1233,7 +1232,7 @@ footer {
 
 #account-form #change-pass-btn {
   color: white;
-  background-color: #a27b5c;
+  background-color: black;
 }
 
 .account-info #orders-btn,
@@ -1344,7 +1343,7 @@ footer {
   text-align: left;
   padding: 5px 10px;
   color: white;
-  background-color: #a27b5c;
+  background-color: #4a4a4a;
 }
 
 .cart td {
@@ -1365,7 +1364,7 @@ footer {
 .cart-total table {
   width: 100%;
   max-width: 500px;
-  border-top: 3px solid #a27b5c;
+  border-top: 3px solid black;
 }
 
 td:last-child {
@@ -1379,7 +1378,8 @@ th:last-child {
 .checkout-btn {
   display: flex;
   justify-content: flex-end;
-  background-color: #a27b5c;
+  background-color: black;
+  color: white;
 }
 
 .checkout-container {

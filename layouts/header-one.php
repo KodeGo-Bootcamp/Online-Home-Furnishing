@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -51,7 +53,7 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           <a class="navbar-brand" href="index.php"
-            ><h2>Home<em> Furnishing</em></h2></a>
+            ><h2>Home Furnishing</h2></a>
           <button
             class="navbar-toggler"
             type="button"
