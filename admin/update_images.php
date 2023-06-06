@@ -27,7 +27,7 @@ if(isset($_POST['update_images'])) {
 
 
     $stmt = $conn->prepare("UPDATE products SET product_image=?, product_image2=?, product_image3=?, product_image4=? WHERE product_id=?");
-    $stmt->bind_param('ssssi',$image1,$image2,$image3,$image4,$product_id);
+    $stmt->bind_param('ssssi',$image_name1,$image_name2,$image_name3,$image_name4,$product_id);
 
     if($stmt->execute()) {
         header('location: products.php?images_updated=Images have been updated successfully');
