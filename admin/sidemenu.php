@@ -20,7 +20,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="account.php">
+            <a class="nav-link" href="admin_account.php">
               <span data-feather="bar-chart-2"></span>
               Account
             </a>
