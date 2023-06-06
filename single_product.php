@@ -163,4 +163,5 @@ if(isset($_GET['product_id'])){
       </div>
     </section>
 
+    <!-- Footer -->
   <?php include('layouts/footer-one.php'); ?>

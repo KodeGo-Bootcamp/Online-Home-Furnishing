@@ -99,8 +99,14 @@ $products = $stmt->get_result();
                       <li><i class="fa fa-star"></i></li>
                     </ul>
                     <br>
-                    <a class="btn buy-btn" href="<?php echo "single_product.php?product_id=" . $row['product_id']; ?>"> Add
-                      to Cart <i class="fa fa-shopping-cart"></i></a>
+                    <form method="POST" action="cart.php">
+          <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
+          <input type="hidden" name="product_image" value="<?php echo $row['product_image']; ?>">
+          <input type="hidden" name="product_name" value="<?php echo $row['product_name']; ?>">
+          <input type="hidden" name="product_price" value="<?php echo $row['product_price']; ?>">
+          <input type="hidden" name="product_quantity" value="1" />
+          <button class="add" type="submit" name="add_to_cart"><i class="fa fa-shopping-cart"></i></button>
+          </form>
                   </div>
                 </div>
               </div>

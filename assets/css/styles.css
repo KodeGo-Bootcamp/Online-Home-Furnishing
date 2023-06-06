@@ -49,20 +49,20 @@ ul.social-icons li a {
   display: inline-block;
   line-height: 50px;
   background-color: black;
-  color: #dcd7c9;
+  color: white;
   font-size: 18px;
   text-align: center;
   transition: all 0.3s;
 }
 
 ul.social-icons li a:hover {
-  background-color: #dcd7c9;
+  background-color: white;
   color: black;
 }
 
 a.filled-button {
   background-color: black;
-  color: #fff;
+  color: white;
   font-size: 14px;
   text-transform: capitalize;
   font-weight: 300;
@@ -80,7 +80,7 @@ a.filled-button:hover {
 .section-heading {
   text-align: left;
   margin-bottom: 60px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid white;
 }
 
 .section-heading h2 {
@@ -310,9 +310,9 @@ header .navbar {
 }
 
 button.add {
-  background: #a27b5c;
+  background: black;
   color: white;
-  border: 1px solid #a27b5c;
+  border: 1px solid black;
   padding: 5px 10px;
   cursor: pointer;
 }
@@ -475,7 +475,7 @@ button.add:hover {
   text-transform: uppercase;
   font-size: 13px;
   font-weight: 700;
-  color: #a27b5c;
+  color: black;
 }
 
 .product-item {
@@ -675,7 +675,7 @@ footer {
   font-weight: 700;
 }
 #basic-addon2 {
-  background: #a27b5c;
+  background: #4a4a4a;
   color: #fff;
 }
 .socials i {
