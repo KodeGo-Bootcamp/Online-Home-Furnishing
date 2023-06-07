@@ -3,7 +3,7 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-box">
-                        <img class="footer-logo" src="assets/images/logo-02.png" alt=""> 
+                    <a href="index.php"><img class="footer-logo" src="assets/images/logo-02.png" alt=""> </a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">

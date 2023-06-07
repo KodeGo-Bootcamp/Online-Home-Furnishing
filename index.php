@@ -126,7 +126,7 @@
           <?php while($row= $latest_products->fetch_assoc()){ ?>
           <div class="col-md-4">
             <div class="product-item">
-              <img class="prod-img" src="assets/images/<?php echo $row['product_image']; ?>" alt="" />
+            <a href="<?php echo "single_product.php?product_id=". $row['product_id']; ?>"><img class="prod-img" src="assets/images/<?php echo $row['product_image']; ?>" alt="" /></a>
               <div class="down-content">
                 <h4><?php echo $row['product_name']; ?></h4>
                 <h6>&#8369;<?php echo $row['product_price']; ?></h6>

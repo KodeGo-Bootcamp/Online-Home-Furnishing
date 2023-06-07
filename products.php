@@ -81,7 +81,7 @@ $products = $stmt->get_result();
             <div name="product_img" class="<?php echo $furn_cat; ?>"> 
               
                 <div class="product-item">
-                  <img class="prod-img" src="assets/images/<?php echo $row['product_image']; ?>" />
+                <a href="<?php echo "single_product.php?product_id=". $row['product_id']; ?>"><img class="prod-img" src="assets/images/<?php echo $row['product_image']; ?>" /></a>
                   <div class="down-content">
                     <a href="#"><?php echo "<script> temp_select1[".$temp_count."] = '".$row['product_name']."';</script>";?>
                       <h4>
