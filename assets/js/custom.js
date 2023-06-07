@@ -98,8 +98,8 @@ jQuery(document).ready(function ($) {
       items: 1,
       margin: 0,
       autoplay: true,
-      smartSpeed: 700,
-      autoplayTimeout: 7000,
+      smartSpeed: 10,
+      autoplayTimeout: 10000,
       responsive: {
         0: {
           items: 1,

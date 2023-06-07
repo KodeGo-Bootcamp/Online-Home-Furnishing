@@ -7,6 +7,9 @@
     <div class="slide banner header-text">
       <div class="owl-banner owl-carousel">
         <div class="banner-item-01">
+        <video class="video-bg" autoplay muted loop>
+    <source src="assets/video/video-06.mp4" type="video/mp4">
+  </video>
           <div class="text-content">
             <h4>Transform Your Home with Home Furnishing</h4>
             <h2>Latest Trends in Furniture and Decor</h2>
@@ -15,14 +18,20 @@
           </div>
         </div>
         <div class="banner-item-02">
+        <video class="video-bg" autoplay muted loop>
+    <source src="assets/video/video-05.mp4" type="video/mp4">
+  </video>
           <div class="text-content">
-            <h4>Discover the Best Deals on Home Furnishings</h4>
+            <!-- <h4>Discover the Best Deals on Home Furnishings</h4> -->
             <h2>Upgrade Your Living Space Today!</h2>
             <br>
             <a href="products.php" class="shop-btn">Shop Now</a>
           </div>
         </div>
         <div class="banner-item-03">
+        <video class="video-bg" autoplay muted loop>
+    <source src="assets/video/video-04.mp4" type="video/mp4">
+  </video>
           <div class="text-content">
             <h4>Get Ready to Fall in Love with Your Home</h4>
             <h2>Wide Selection of Quality Furniture</h2>
@@ -75,6 +84,29 @@
         <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="assets/images/brands/brand-04.png" alt="">
       </div>
     </section>
+
+
+
+    <!-- video ad -->
+    <div class="page-heading header-text">
+  <video class="video-bg" autoplay muted loop>
+    <source src="assets/video/video-03.mp4" type="video/mp4">
+  </video>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-content">
+          <br><br><br>
+          <h2>15% off selected products</h2>
+          <br>
+          <a href="products.php" class="shop-btn">SHOP THE SALE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
     <!-- Latest Products -->
     <div class="latest-products">

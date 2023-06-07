@@ -90,7 +90,7 @@ a.filled-button:hover {
   margin-bottom: 15px;
 }
 
-.products-heading {
+/* .products-heading {
   background-image: url(../images/products-heading1.jpg);
 }
 
@@ -100,7 +100,7 @@ a.filled-button:hover {
 
 .contact-heading {
   background-image: url(../images/contact-heading.jpg);
-}
+} */
 
 .page-heading {
   padding: 210px 0px 130px 0px;
@@ -108,6 +108,19 @@ a.filled-button:hover {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
+  position: relative;
+  /* min-height: 100vh; */
+}
+
+/* video ad style */
+.video-bg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .page-heading .text-content h4 {
@@ -360,11 +373,11 @@ button.add:hover {
 
 .cart-quantity {
   background-color: red;
-  color: white;
-  padding: 2px 5px;
+  color: red;
+  padding: 3px 6px;
   border-radius: 50%;
-  margin: -3px;
-  font-size: 10px;
+  margin: -5px;
+  font-size: 6px;
 }
 
 .logo {
@@ -381,26 +394,29 @@ button.add:hover {
 
 .banner-item-01 {
   padding: 300px 0px;
-  background-image: url(../images/slide_01.jpg);
+  /* background-image: url(../images/slide_01.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  position: relative;
 }
 
 .banner-item-02 {
   padding: 300px 0px;
-  background-image: url(../images/slide_02.jpg);
+  /* background-image: url(../images/slide_02.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  position: relative;
 }
 
 .banner-item-03 {
   padding: 300px 0px;
-  background-image: url(../images/slide_03.jpg);
+  /* background-image: url(../images/slide_03.jpg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  position: relative;
 }
 
 .banner .banner-item {
@@ -1158,4 +1174,113 @@ footer {
     position: static;
     margin-bottom: 20px;
   }
+}
+
+/* Floating Cart page */
+
+.shopping-cart {
+  border: 0px solid;
+  position: absolute;
+  top: 110%;
+  right: -110%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 5px 10px black;
+  width: 300px;
+  background: #1e1e1e;
+}
+
+.shopping-cart.active {
+  right: 2rem;
+  transition: 0.4s linear;
+}
+
+.shopping-cart .box {
+  border: 0px solid;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  margin: 1rem 0;
+}
+
+.shopping-cart .box img {
+  height: 80px;
+}
+
+.shopping-cart .box .remove-btn .fa-trash {
+  font-size: 15px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+}
+
+.shopping-cart .box .remove-btn .fa-trash:hover {
+  color: red;
+}
+
+.shopping-cart .box .content {
+  color: white;
+  font-size: 10px;
+  /* padding-bottom: 1rem; */
+}
+
+.shopping-cart .box .content p {
+  color: white;
+  font-size: 15px;
+  /* padding-bottom: 1rem; */
+}
+
+.shopping-cart .box .content span {
+  color: white;
+  font-size: 12px;
+}
+
+.shopping-cart .box .content input[type="number"] {
+  font-size: 10px;
+  width: 40px;
+}
+
+.shopping-cart .box .content .edit-btn {
+  width: 30px;
+  font-size: 10px;
+}
+
+.shopping-cart .remove-btn {
+  width: 30px;
+  font-size: 15px;
+  border: none;
+}
+
+.shopping-cart .total {
+  border-top: 2px solid white;
+  width: 100%;
+  font-size: 20px;
+  padding: 1rem 0;
+  text-align: center;
+  color: white;
+}
+
+.btn {
+  width: 100%;
+  border: 1px solid white;
+  margin-top: 20px;
+  display: inline-block;
+  padding: 5px 5px;
+  font-size: 20px;
+  border-radius: 0.5rem;
+  color: white;
+  background: black;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #a27b5c;
+  color: white;
+}
+
+.shopping-cart .btn {
+  display: block;
+  text-align: center;
+  margin: 1rem 0;
 }

@@ -2,6 +2,9 @@
   
     <!-- Page Content -->
     <div class="page-heading contact-heading header-text">
+    <video class="video-bg" autoplay muted loop>
+    <source src="assets/video/video-03.mp4" type="video/mp4">
+  </video>
       <div class="container">
         <div class="row">
           <div class="col-md-12">

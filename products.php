@@ -22,6 +22,9 @@ $products = $stmt->get_result();
 
 <!-- Page Content -->
 <div class="page-heading products-heading header-text">
+<video class="video-bg" autoplay muted loop>
+    <source src="assets/video/video-01.mp4" type="video/mp4">
+  </video>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
