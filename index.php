@@ -139,7 +139,7 @@
                   <li><i class="fa fa-star"></i></li>
                 </ul>
                 <br>
-          <form method="POST" action="cart.php">
+          <form method="POST">
           <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
           <input type="hidden" name="product_image" value="<?php echo $row['product_image']; ?>">
           <input type="hidden" name="product_name" value="<?php echo $row['product_name']; ?>">

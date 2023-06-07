@@ -1130,6 +1130,7 @@ footer {
   font-size: 15px;
   cursor: pointer;
   color: black;
+  font-weight: bold;
   text-decoration: none;
 }
 

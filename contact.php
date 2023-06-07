@@ -47,10 +47,7 @@
             <div class="left-content">
               <h4>About our office</h4>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisic elit. Sed
-                voluptate nihil eumester consectetur similiqu consectetur.<br /><br />Lorem
-                ipsum dolor sit amet, consectetur adipisic elit. Et,
-                consequuntur, modi mollitia corporis ipsa voluptate corrupti.
+              Our vibrant office in Pasig, Manila, the creative hub of our thriving online home furnishing store. Nestled amidst the bustling cityscape, our office is a testament to our passion for curating stylish and functional products that transform houses into homes. <br>
               </p>
             </div>
           </div>
