@@ -76,7 +76,7 @@ if(isset($_SESSION['logged_in'])){
           <input type="submit" class="btn" id="login-btn" name="login_btn" value="Login" />
         </div>
         <div class="form-group">
-          <a href="../user/register.php" id="register-url" class="btn">Sign Up</a>
+          <a href="register.php" id="register-url" class="btn">Sign Up</a>
         </div>
       </form>
     </div>

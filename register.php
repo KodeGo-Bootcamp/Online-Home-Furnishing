@@ -1,6 +1,6 @@
 <?php
 
-    include('../server/connection.php');
+    include('server/connection.php');
 
 
 
@@ -87,21 +87,20 @@
     />
     <meta name="title" content="Online Home Furnishing" />
     <title>Online Home Furnishing</title>
-    <link rel="stylesheet" href="../user/style.css" />
+    <link rel="stylesheet" href="assets/css/userlogin.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
       rel="stylesheet"
     />
 
         <!-- Favicon -->
-        <link rel="icon" href="../assets/images/logo-02.jpg">
+        <link rel="icon" href="assets/images/logo-02.jpg">
   </head>
   <body>
     <div class="split-screen">
       <div class="left">
         <section class="copy">
           <h1>Explore your creativity.</h1>
-          <a href="../products.php" class="shop-btn">Shop Now</a>
         </section>
       </div>
       <div class="right">
