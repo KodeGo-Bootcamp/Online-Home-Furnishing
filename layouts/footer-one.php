@@ -49,6 +49,21 @@
   </div>
     </footer>
 
+ <!-- Changing images  -->
+ <script>
+      var mainImg = document.getElementById("mainImg");
+      var smallImg = document.getElementsByClassName("small-img");
+
+      for(let i=0; i<5; i++){
+        smallImg[i].onclick = function(){
+        mainImg.src= smallImg[i].src;
+      }
+
+      }
+
+    </script>
+     <!-- Changing images  -->
+
 
 
     <div onclick="scrollToTop()" class="scrollTop">
@@ -60,6 +75,7 @@
         window.scrollTo(0, 0);
       }
     </script>
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

@@ -4,7 +4,6 @@ include('server/connection.php');
 if (isset($_POST['search'])) {
   // Call a function to perform the desired action
   $query = $_POST['query'];
-  echo "<script> alert('".$query."'); </script>";
   $stmt = $conn->prepare("SELECT * FROM products WHERE product_name LIKE '%". $query ."%' OR product_category LIKE '%". $query ."%'");
 }else{
   $stmt = $conn->prepare("SELECT * FROM products");

@@ -10,9 +10,9 @@
                     <div class="single-box">
                         <h2>QUICK LINKS</h2>
                     <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Refund Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="assets/legal/Privacy Policy for Home Furnishing Online Store.pdf">Privacy Policy</a></li>
+                        <li><a href="assets/legal/Home Furnishing - Refund Policy.pdf">Refund Policy</a></li>
+                        <li><a href="assets/legal/Home Furnishing - Terms of Service.pdf">Terms of Service</a></li>
                     </ul>
                     </div>                    
                 </div>
@@ -72,6 +72,7 @@
     <script src="assets/js/accordions.js"></script>
     <script src="assets/js/cart.js"></script>
   
+
 
     <script language="text/Javascript">
       cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field

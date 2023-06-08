@@ -16,6 +16,7 @@ if(isset($_POST['create_product'])) {
     $image2 =$_FILES['image2']['tmp_name'];
     $image3 =$_FILES['image3']['tmp_name'];
     $image4 =$_FILES['image4']['tmp_name'];
+    $image5 =$_FILES['image5']['tmp_name'];
     // $file_name = $_FILES['image1']['name'];
 
 
@@ -24,18 +25,20 @@ if(isset($_POST['create_product'])) {
     $image_name2 = $product_name."2.jpeg"; //wooden table2.jpeg
     $image_name3 = $product_name."3.jpeg";
     $image_name4 = $product_name."4.jpeg";
+    $image_name5 = $product_name."5.jpeg";
 
     //upload images
     move_uploaded_file($image1,"../assets/images/".$image_name1);
     move_uploaded_file($image2,"../assets/images/".$image_name2);
     move_uploaded_file($image3,"../assets/images/".$image_name3);
     move_uploaded_file($image4,"../assets/images/".$image_name4);
+    move_uploaded_file($image5,"../assets/images/".$image_name5);
 
     //create a new user
-    $stmt = $conn->prepare("INSERT INTO products (product_name,product_description,product_price,product_special_offer,product_image,product_image2,product_image3,product_image4,product_category)
-    VALUES (?,?,?,?,?,?,?,?,?)");
+    $stmt = $conn->prepare("INSERT INTO products (product_name,product_description,product_price,product_special_offer,product_image,product_image1,product_image2,product_image3,product_image4,product_category)
+    VALUES (?,?,?,?,?,?,?,?,?,?)");
 
-    $stmt->bind_param('sssssssss',$product_name,$product_description,$product_price,$product_special_offer,$image_name1,$image_name2,$image_name3,$image_name4,$product_category);
+    $stmt->bind_param('ssssssssss',$product_name,$product_description,$product_price,$product_special_offer,$image_name1,$image_name2,$image_name3,$image_name4,$image5,$product_category);
 
     if($stmt->execute()) {
         header('location: admin_products.php?product_created=Product has been created successfully');

@@ -73,18 +73,23 @@
     </section>
 
     <!-- Brands -->
-    <section id="brand" class="container">
+    <section id="brand" class="happy-clients">
     <div class="container text-center mt-5 py-5">
         <h3>Partner Brands</h3>
         <hr />
-      <div class="row">
-        <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="assets/images/brands/brand-05.png" alt="">
-        <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="assets/images/brands/brand-02.png" alt="">
-        <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="assets/images/brands/brand-08.png" alt="">
-        <img class="img-fluid col-lg-3 col-md-6 col-sm-12" src="assets/images/brands/brand-04.png" alt="">
+      <div class="owl-clients owl-carousel">
+        <img class="client-item" src="assets/images/brands/brand-01.png" alt="1">
+        <img class="client-item" src="assets/images/brands/brand-02.png" alt="2">
+        <img class="client-item" src="assets/images/brands/brand-03.png" alt="3">
+        <img class="client-item" src="assets/images/brands/brand-04.png" alt="4">
+        <img class="client-item" src="assets/images/brands/brand-05.png" alt="5">
+        <img class="client-item" src="assets/images/brands/brand-06.png" alt="6">
+        <img class="client-item" src="assets/images/brands/brand-07.png" alt="7">
+        <img class="client-item" src="assets/images/brands/brand-08.png" alt="8">
+        <img class="client-item" src="assets/images/brands/brand-09.png" alt="9">
+        <img class="client-item" src="assets/images/brands/brand-10.png" alt="10">
       </div>
     </section>
-
 
 
     <!-- video ad -->

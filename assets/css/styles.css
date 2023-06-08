@@ -1203,3 +1203,14 @@ footer {
   text-align: center;
   margin: 1rem 0;
 }
+
+.happy-clients .client-item img {
+  max-width: 100%;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.happy-clients .client-item img:hover {
+  opacity: 0.8;
+}

@@ -78,8 +78,7 @@ if(isset($_SESSION['logged_in'])){
         <p class="title">Welcome Back!</p>
         <div class="separator"></div>
         <p class="welcome-message">
-          Browse through our wide range of products and find that perfect piece
-          that speaks to you. Don't have an account?<a href="register.php"> Click Here.</a>
+        Enjoy a seamless shopping experience with secure transactions and prompt delivery. <br> Don't have an account?<a href="register.php"> Click Here.</a>
         </p>
 
       <form id="login-form" method="POST" action="login.php">

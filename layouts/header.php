@@ -32,7 +32,7 @@
   
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/images/logo-02.jpg">
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo-02.jpg">
 
   </head>
 

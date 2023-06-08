@@ -63,17 +63,22 @@
 
                 <div class="form-group mt-2">
                     <label>Image 2</label>
-                    <input type="file" class="form-control" id="image2" name="image2" placeholder="Image 2" required/>
+                    <input type="file" class="form-control" id="image1" name="image2" placeholder="Image 2" required/>
                 </div>
 
                 <div class="form-group mt-2">
                     <label>Image 3</label>
-                    <input type="file" class="form-control" id="image3" name="image3" placeholder="Image 3" required/>
+                    <input type="file" class="form-control" id="image2" name="image3" placeholder="Image 3" required/>
+                </div>
+
+                <div class="form-group mt-2">
+                    <label>Image 4</label>
+                    <input type="file" class="form-control" id="image3" name="image4" placeholder="Image 4" required/>
                 </div>
 
                   <div class="form-group mt-2">
-                    <label>Image 4</label>
-                    <input type="file" class="form-control" id="image4" name="image4" placeholder="Image 4" required/>
+                    <label>Image 5</label>
+                    <input type="file" class="form-control" id="image4" name="image5" placeholder="Image 5" required/>
                 </div>
           
 

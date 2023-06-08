@@ -33,11 +33,11 @@ jQuery(document).ready(function ($) {
   if ($(".owl-clients").length) {
     $(".owl-clients").owlCarousel({
       loop: true,
-      nav: false,
+      nav: true,
       dots: true,
       items: 1,
       margin: 30,
-      autoplay: false,
+      autoplay: true,
       smartSpeed: 700,
       autoplayTimeout: 7000,
       responsive: {

@@ -32,8 +32,8 @@
     <link rel="stylesheet" href="assets/css/owl.css" />
   
 
-    <!-- Favicon -->
-    <link rel="icon" href="assets/images/logo-02.jpg">
+   <!-- Favicon -->
+   <link rel="shortcut icon" type="image/png" href="assets/images/logo-02.jpg">
 
   </head>
 

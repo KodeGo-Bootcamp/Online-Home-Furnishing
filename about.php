@@ -27,7 +27,7 @@
           </div>
           <div class="col-md-6">
             <div class="right-image">
-              <img src="assets/images/logo-01.png" alt="" />
+              <img src="assets/images/logo-02.png" alt="" />
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
@@ -92,10 +92,6 @@
               </div>
               <div class="down-content">
                 <h4>Raymond Usman</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing itaque
-                  corporis nulla.
-                </p>
               </div>
             </div>
           </div>
@@ -117,9 +113,6 @@
               </div>
               <div class="down-content">
                 <h4>Gilbert Terbio</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing itaque
-                  corporis nulla.
                 </p>
               </div>
             </div>
@@ -142,9 +135,6 @@
               </div>
               <div class="down-content">
                 <h4>Regie Marzan</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing itaque
-                  corporis nulla.
                 </p>
               </div>
             </div>
@@ -167,9 +157,6 @@
               </div>
               <div class="down-content">
                 <h4>Benjie Gorgod</h4>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing itaque
-                  corporis nulla.
                 </p>
               </div>
             </div>
