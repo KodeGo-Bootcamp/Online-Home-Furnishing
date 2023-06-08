@@ -1,4 +1,4 @@
-<?php include('layouts/header-one.php'); ?>
+
 <?php 
 
 include('server/connection.php');
