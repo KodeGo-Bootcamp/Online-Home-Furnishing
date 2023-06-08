@@ -1,5 +1,6 @@
-<?php include('layouts/header-one.php'); ?>
 <?php
+
+session_start();
 
 include('server/connection.php');
 
@@ -43,43 +44,72 @@ if(isset($_SESSION['logged_in'])){
   }
   ?>
 
-    <!-- Login -->
-    <div class="container text-center mt-3 pt-5">
-      <h3 class="form-weight-bold">Login</h3>
-    </div>
-    <div class="mx-auto container">
-      <p style="color: red;" class="text-center"><?php if(isset($_GET['error'])) {echo $_GET['error']; }?></p>
-      <form id="login-form" method="POST" action="login.php">
-        <div class="form-group">
-          <label>Email</label>
-          <input
-            type="text"
-            class="form-control"
-            id="login-email"
-            name="email"
-            placeholder="Email"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label>Password</label>
-          <input
-            type="text"
-            class="form-control"
-            id="login-password"
-            name="password"
-            placeholder="Password"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <input type="submit" class="btn" id="login-btn" name="login_btn" value="Login" />
-        </div>
-        <div class="form-group">
-          <a href="register.php" id="register-url" class="btn">Sign Up</a>
-        </div>
-      </form>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="This is an Online Furniture Store made by Group 4 - Full Stack Web Development KodeGo Bootcamp 2023"
+    />
+    <meta name="title" content="Online Home Furnishing" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/sign-in.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Home Furnishing</title>
+  </head>
+  <body>
+    <section class="side">
+      <img src="assets/images/image-15.png" alt="" />
+    </section>
 
-    <!-- Footer -->
-    <?php include('layouts/footer-one.php'); ?>
+    <section class="main">
+      <div class="login-container">
+        <p class="title">Welcome Back!</p>
+        <div class="separator"></div>
+        <p class="welcome-message">
+          Browse through our wide range of products and find that perfect piece
+          that speaks to you. Don't have an account?<a href="register.php"> Click Here.</a>
+        </p>
+
+      <form id="login-form" method="POST" action="login.php">
+          <div class="form-control">
+            <input
+              type="text"
+              class="form-control"
+              id="login-email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="form-control">
+            <input
+              type="text"
+              class="form-control"
+              id="login-password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <i class="fas fa-lock"></i>
+          </div>
+          <p style="color: red;" class="back-btn"><?php if(isset($_GET['error'])) {echo $_GET['error']; }?></p>
+          <button type="submit" class="submit" id="login-btn" name="login_btn" value="Login">Login</button>
+        </form>
+        <a href="index.php" class="back-btn">Go back to store</a>
+      </div>
+    </section>
+  </body>
+</html>

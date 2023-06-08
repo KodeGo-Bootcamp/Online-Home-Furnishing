@@ -18,7 +18,7 @@
       rel="stylesheet"
     />
 
-    <title>Online Home Furnishing</title>
+    <title>Home Furnishing</title>
 
     <script src="https://kit.fontawesome.com/aab2d75e67.js" crossorigin="anonymous"></script>
 
@@ -83,7 +83,7 @@
                 <a class="nav-link" href="contact.php">Contact </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping">
+                <a class="nav-link" id="cart-btn"><i class="fa-solid fa-cart-shopping">
                 <?php if (isset($_SESSION['quantity']) && $_SESSION['quantity'] !=0) { ?>
                       <span class="cart-quantity"><?php echo $_SESSION['quantity']; ?></span>
                   <?php } ?>

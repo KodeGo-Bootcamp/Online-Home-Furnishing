@@ -87,7 +87,7 @@
     />
     <meta name="title" content="Online Home Furnishing" />
     <title>Online Home Furnishing</title>
-    <link rel="stylesheet" href="assets/css/userlogin.css" />
+    <link rel="stylesheet" href="assets/css/sign-up.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap"
       rel="stylesheet"
@@ -109,7 +109,7 @@
             <h2>Sign up</h2>
             <div class="login-container">
               <p>
-                Already have an account?<a href="index.php"><strong> Log In</strong></a>
+                Already have an account?<a href="login.php"><strong> Log In</strong></a>
               </p>
             </div>
           </section>

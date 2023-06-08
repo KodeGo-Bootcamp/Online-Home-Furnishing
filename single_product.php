@@ -78,7 +78,7 @@ if(isset($_GET['product_id'])){
           <h3 class="py-4"><?php echo $row['product_name']; ?></h3>
           <h2>&#8369;<?php echo $row['product_price']; ?></h2>
 
-          <form method="POST" action="cart.php">
+          <form method="POST">
           <input type="hidden" name="product_id" value="<?php echo $row['product_id']; ?>">
           <input type="hidden" name="product_image" value="<?php echo $row['product_image']; ?>">
           <input type="hidden" name="product_name" value="<?php echo $row['product_name']; ?>">

@@ -17,7 +17,7 @@
       rel="stylesheet"
     />
 
-    <title>Online Home Furnishing</title>
+    <title>Home Furnishing</title>
 
     <script src="https://kit.fontawesome.com/aab2d75e67.js" crossorigin="anonymous"></script>
 
