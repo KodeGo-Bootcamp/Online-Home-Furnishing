@@ -84,7 +84,6 @@
         <img class="client-item" src="assets/images/brands/brand-04.png" alt="4">
         <img class="client-item" src="assets/images/brands/brand-05.png" alt="5">
         <img class="client-item" src="assets/images/brands/brand-06.png" alt="6">
-        <img class="client-item" src="assets/images/brands/brand-07.png" alt="7">
         <img class="client-item" src="assets/images/brands/brand-08.png" alt="8">
         <img class="client-item" src="assets/images/brands/brand-09.png" alt="9">
         <img class="client-item" src="assets/images/brands/brand-10.png" alt="10">

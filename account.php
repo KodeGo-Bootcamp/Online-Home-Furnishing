@@ -146,6 +146,9 @@ $orders = $stmt->get_result();
               <li class="nav-item">
                 <a class="nav-link" href="contact.php">Contact </a>
               </li>
+              <li class="nav-item">
+              <a href="login.php" class="nav-link"><i class="fa-solid fa-circle-user"></i></a>
+              </li>
             </ul>
           </div>
         </div>

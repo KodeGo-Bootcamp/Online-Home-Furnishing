@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-
+<!-- 
     <div class="team-members">
       <div class="container">
         <div class="row">
@@ -163,7 +163,27 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+
+    <section id="featured" class="my-5 pb-5">
+      <div class="container text-center mt-5 py-5">
+        <h3>Team Members</h3>
+        <hr />
+      </div>
+      <div class="row mx-auto container-fluid">
+
+      <?php include('server/get_team_member.php'); ?>
+
+      <?php while($row= $team_member->fetch_assoc()){ ?>
+
+        <div class="product text-center img-fluid col-lg-3 col-md-6 col-sm-12">
+        <img class="img-fluid mb-3" src="assets/images/<?php echo $row['team_image']; ?>" alt="" />
+          <h5 class="p-name"><?php echo $row['team_name']; ?></h5>
+        </div>
+        <?php } ?>
+      </div>
+    </section>
+
     
 <!-- Footer -->
   <?php include('layouts/footer.php'); ?>
