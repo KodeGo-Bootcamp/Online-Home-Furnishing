@@ -75,13 +75,13 @@
           <div class="col-md-4">
             <div class="team-member">
               <div class="thumb-container">
-                <img src="assets/images/team_01.jpg" alt="" />
+                <img src="assets/images/team_02.jpg" alt="" />
                 <div class="hover-effect">
                   <div class="hover-content">
                     <ul class="social-icons">
                       <li>
                         <a
-                          href="https://github.com/raymondkingusman"
+                          href="https://github.com/terbiogb"
                           target="_blank"
                           ><i class="fa fa-github"></i
                         ></a>
@@ -91,19 +91,19 @@
                 </div>
               </div>
               <div class="down-content">
-                <h4>Raymond Usman</h4>
+                <h4>Gilbert Terbio</h4>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="team-member">
               <div class="thumb-container">
-                <img src="assets/images/team_02.jpg" alt="" />
+                <img src="assets/images/team_01.jpg" alt="" />
                 <div class="hover-effect">
                   <div class="hover-content">
                     <ul class="social-icons">
                       <li>
-                        <a href="https://github.com/terbiogb" target="_blank"
+                        <a href="https://github.com/raymondkingusman" target="_blank"
                           ><i class="fa fa-github"></i
                         ></a>
                       </li>
@@ -112,7 +112,7 @@
                 </div>
               </div>
               <div class="down-content">
-                <h4>Gilbert Terbio</h4>
+                <h4>Raymond Usman</h4>
                 </p>
               </div>
             </div>
