@@ -8,6 +8,17 @@ header('location: login.php');
 exit;
 }
 
+if( !empty($_SESSION['cart'])){
+
+  //let user IN
+
+
+  //route user to the home page
+}else{
+
+  header('location: login.php');
+  exit;
+}
 ?>
 
 <!DOCTYPE html>
@@ -105,16 +116,7 @@ exit;
 
 <?php
 
-if( !empty($_SESSION['cart'])){
 
-  //let user IN
-
-
-  //route user to the home page
-}else{
-
-  header('location: index.php');
-}
 ?>
 
 
