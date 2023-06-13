@@ -1,4 +1,14 @@
 <?php session_start(); ?>
+<?php
+
+include('server/connection.php');
+
+if(!isset($_SESSION['logged_in'])){
+header('location: login.php');
+exit;
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -91,14 +101,9 @@
       </nav>
     </header>
 
+
+
 <?php
-
-include('server/connection.php');
-
-if(!isset($_SESSION['logged_in'])){
-header('location: login.php');
-exit;
-}
 
 if( !empty($_SESSION['cart'])){
 
