@@ -1,5 +1,4 @@
 <?php session_start(); ?>
-
 <?php
 
 include('server/connection.php');
@@ -15,7 +14,7 @@ exit;
       unset($_SESSION['logged_in']);
       unset($_SESSION['user_email']);
       unset($_SESSION['user_name']);
-      header('location: login.php');
+      header('location: index.php');
       exit;
     }
 }
