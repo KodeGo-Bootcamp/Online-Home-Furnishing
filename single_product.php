@@ -1,8 +1,6 @@
 
 <?php 
 
-session_start(); 
-
 include('server/connection.php');
 
 if(isset($_GET['product_id'])){
