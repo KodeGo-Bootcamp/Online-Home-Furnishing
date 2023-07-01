@@ -7,7 +7,7 @@ include('server/connection.php');
 if(isset($_SESSION['logged_in'])){
   header('location: account.php');
   exit;
-}
+}//new
 
   if(isset($_POST['login_btn'])){
 
